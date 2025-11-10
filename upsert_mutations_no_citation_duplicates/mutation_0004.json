@@ -1,0 +1,39 @@
+{
+  "query": "{\n  main as var(func: eq(judgment_id, \"J_4\"))\n  cite_d9b49104805f as var(func: eq(title, \"Nanda Dulal Pradhan & Anr. v. Dibakar Pradhan & Anr. [2022] 7 SCR 483 : 2022 SCC OnLine SC 822\"))\n  cite_bf01db58c8c3 as var(func: eq(title, \"Nalini Sunder v. GV Sunder AIR 2003 Kar 86\"))\n  cite_7f56d09bbc7c as var(func: eq(title, \"R.V. Prasannakumaar & others. v. Mantri Castles Private Limited & Another [2019] 5 SCR 821 : (2020) 14 SCC 769\"))\n}",
+  "set": [
+    {
+      "uid": "uid(main)",
+      "judgment_id": "J_4",
+      "title": "Kaushik Narsinhbhai Patel & Ors. v. M/s S.J.R. Prime Corporation Private Limited",
+      "doc_id": "d",
+      "dgraph.type": "Judgment",
+      "year": 2024,
+      "cites": [
+        {
+          "uid": "uid(cite_d9b49104805f)"
+        },
+        {
+          "uid": "uid(cite_bf01db58c8c3)"
+        },
+        {
+          "uid": "uid(cite_7f56d09bbc7c)"
+        }
+      ]
+    },
+    {
+      "uid": "uid(cite_d9b49104805f)",
+      "title": "Nanda Dulal Pradhan & Anr. v. Dibakar Pradhan & Anr. [2022] 7 SCR 483 : 2022 SCC OnLine SC 822",
+      "dgraph.type": "Judgment"
+    },
+    {
+      "uid": "uid(cite_bf01db58c8c3)",
+      "title": "Nalini Sunder v. GV Sunder AIR 2003 Kar 86",
+      "dgraph.type": "Judgment"
+    },
+    {
+      "uid": "uid(cite_7f56d09bbc7c)",
+      "title": "R.V. Prasannakumaar & others. v. Mantri Castles Private Limited & Another [2019] 5 SCR 821 : (2020) 14 SCC 769",
+      "dgraph.type": "Judgment"
+    }
+  ]
+}

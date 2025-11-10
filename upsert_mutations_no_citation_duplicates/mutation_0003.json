@@ -1,0 +1,39 @@
+{
+  "query": "{\n  main as var(func: eq(judgment_id, \"J_3\"))\n  cite_22758abd82dd as var(func: eq(title, \"Mohd. Yusuf v. Rajkumar [2020] 3 SCR 649 : (2020) 10 SCC 264\"))\n  cite_112e5e71bd52 as var(func: eq(title, \"Ravinder Kaur Grewal and Others v. Manjit Kaur and Others [2019] 11 SCR 74 : (2019) 8 SCC 729\"))\n  cite_1faf09a32754 as var(func: eq(title, \"Khushi Ram v. Nawal Singh [2021] 4 SCR 1019 : (2021) 16 SCC 279\"))\n}",
+  "set": [
+    {
+      "uid": "uid(main)",
+      "judgment_id": "J_3",
+      "title": "Mukesh v. The State of Madhya Pradesh & Anr.",
+      "doc_id": "c",
+      "dgraph.type": "Judgment",
+      "year": 2024,
+      "cites": [
+        {
+          "uid": "uid(cite_22758abd82dd)"
+        },
+        {
+          "uid": "uid(cite_112e5e71bd52)"
+        },
+        {
+          "uid": "uid(cite_1faf09a32754)"
+        }
+      ]
+    },
+    {
+      "uid": "uid(cite_22758abd82dd)",
+      "title": "Mohd. Yusuf v. Rajkumar [2020] 3 SCR 649 : (2020) 10 SCC 264",
+      "dgraph.type": "Judgment"
+    },
+    {
+      "uid": "uid(cite_112e5e71bd52)",
+      "title": "Ravinder Kaur Grewal and Others v. Manjit Kaur and Others [2019] 11 SCR 74 : (2019) 8 SCC 729",
+      "dgraph.type": "Judgment"
+    },
+    {
+      "uid": "uid(cite_1faf09a32754)",
+      "title": "Khushi Ram v. Nawal Singh [2021] 4 SCR 1019 : (2021) 16 SCC 279",
+      "dgraph.type": "Judgment"
+    }
+  ]
+}
