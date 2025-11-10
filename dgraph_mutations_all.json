@@ -1,0 +1,787 @@
+{
+  "query": "{\n  main_1 as var(func: eq(judgment_id, \"J_1\"))\n  cite_c8ef4cf7b354 as var(func: eq(title, \"State of Uttarakhand and Ors. v. Harpal Singh Rawat (2011) 4 SCC 575\"))\n  cite_cf8d5292987f as var(func: eq(title, \"Nasiruddin and another v. State of Uttar Pradesh Thr. Secretary and Ors. [2017] 12 SCR 1073 : (2018) 1 SCC 754\"))\n  cite_977c11ec14fb as var(func: eq(title, \"Paramjeet Batra v. State of Uttarakhand (2013) 11 SCC 673\"))\n  judge_ea7adefdc6b8 as var(func: eq(name, \"Justice D. Y. Chandrachud\")) @filter(type(Judge))\n  judge_06580d7652a6 as var(func: eq(name, \"Justice Sanjay Kishan Kaul\")) @filter(type(Judge))\n  judge_d3340d96750f as var(func: eq(name, \"Justice Indu Malhotra\")) @filter(type(Judge))\n  adv_eb6dad08caf7 as var(func: eq(name, \"Mr. Mukul Rohatgi\")) @filter(type(Advocate) AND eq(advocate_type, \"petitioner\"))\n  adv_7fd263cf9570 as var(func: eq(name, \"Ms. Meenakshi Arora\")) @filter(type(Advocate) AND eq(advocate_type, \"petitioner\"))\n  adv_96caa1fada7f as var(func: eq(name, \"Mr. Tushar Mehta\")) @filter(type(Advocate) AND eq(advocate_type, \"respondant\"))\n  adv_b5acf30ec942 as var(func: eq(name, \"Mr. Aman Lekhi\")) @filter(type(Advocate) AND eq(advocate_type, \"respondant\"))\n  outcome_ea9157af292a as var(func: eq(name, \"Petitioner Won\")) @filter(type(Outcome))\n  duration_628e8e7ffebc as var(func: eq(duration, \"2019-03-15 to 2019-11-18\")) @filter(type(CaseDuration))\n  main_2 as var(func: eq(judgment_id, \"J_2\"))\n  cite_d9b49104805f as var(func: eq(title, \"Nanda Dulal Pradhan & Anr. v. Dibakar Pradhan & Anr. [2022] 7 SCR 483 : 2022 SCC OnLine SC 822\"))\n  cite_bf01db58c8c3 as var(func: eq(title, \"Nalini Sunder v. GV Sunder AIR 2003 Kar 86\"))\n  cite_7f56d09bbc7c as var(func: eq(title, \"R.V. Prasannakumaar & others. v. Mantri Castles Private Limited & Another [2019] 5 SCR 821 : (2020) 14 SCC 769\"))\n  judge_313df3735b58 as var(func: eq(name, \"Justice A. S. Bopanna\")) @filter(type(Judge))\n  judge_32284f1797d2 as var(func: eq(name, \"Justice S. Abdul Nazeer\")) @filter(type(Judge))\n  adv_e1cd986ce44a as var(func: eq(name, \"Mr. Shyam Divan\")) @filter(type(Advocate) AND eq(advocate_type, \"petitioner\"))\n  adv_fdba8c8dc2b6 as var(func: eq(name, \"Ms. Pinky Anand\")) @filter(type(Advocate) AND eq(advocate_type, \"respondant\"))\n  adv_cec1f1695283 as var(func: eq(name, \"Mr. Rakesh Dwivedi\")) @filter(type(Advocate) AND eq(advocate_type, \"respondant\"))\n  outcome_4b5e1a039d2a as var(func: eq(name, \"Respondent Won\")) @filter(type(Outcome))\n  duration_c87be8f15dd7 as var(func: eq(duration, \"2020-04-10 to 2021-01-24\")) @filter(type(CaseDuration))\n  main_3 as var(func: eq(judgment_id, \"J_3\"))\n  cite_22758abd82dd as var(func: eq(title, \"Mohd. Yusuf v. Rajkumar [2020] 3 SCR 649 : (2020) 10 SCC 264\"))\n  cite_112e5e71bd52 as var(func: eq(title, \"Ravinder Kaur Grewal and Others v. Manjit Kaur and Others [2019] 11 SCR 74 : (2019) 8 SCC 729\"))\n  cite_1faf09a32754 as var(func: eq(title, \"Khushi Ram v. Nawal Singh [2021] 4 SCR 1019 : (2021) 16 SCC 279\"))\n  judge_da7911a877f7 as var(func: eq(name, \"Justice R. Banumathi\")) @filter(type(Judge))\n  judge_a2ba7562366e as var(func: eq(name, \"Justice V. Ramasubramanian\")) @filter(type(Judge))\n  judge_6189f58a9f19 as var(func: eq(name, \"Justice Bela M. Trivedi\")) @filter(type(Judge))\n  adv_c961b5763979 as var(func: eq(name, \"Mr. Abhishek Manu Singhvi\")) @filter(type(Advocate) AND eq(advocate_type, \"petitioner\"))\n  adv_e6bd30275027 as var(func: eq(name, \"Ms. Karuna Nundy\")) @filter(type(Advocate) AND eq(advocate_type, \"petitioner\"))\n  adv_5603d437ff5d as var(func: eq(name, \"Mr. K. K. Venugopal\")) @filter(type(Advocate) AND eq(advocate_type, \"respondant\"))\n  duration_693c67138f10 as var(func: eq(duration, \"2021-01-05 to 2021-06-30\")) @filter(type(CaseDuration))\n  main_4 as var(func: eq(judgment_id, \"J_4\"))\n  cite_fc612241514d as var(func: eq(title, \"M/s Rewa Tollway P. Ltd. v. The State of Madhya Pradesh & Ors.\"))\n  judge_f91656ed55b5 as var(func: eq(name, \"Justice Krishna Murari\")) @filter(type(Judge))\n  judge_dc03a13184e6 as var(func: eq(name, \"Justice P. S. Narasimha\")) @filter(type(Judge))\n  judge_ee6134f6564c as var(func: eq(name, \"Justice Aniruddha Bose\")) @filter(type(Judge))\n  adv_8c403aa30d79 as var(func: eq(name, \"Mr. Sidharth Luthra\")) @filter(type(Advocate) AND eq(advocate_type, \"petitioner\"))\n  adv_7c001204688a as var(func: eq(name, \"Mr. Maninder Singh\")) @filter(type(Advocate) AND eq(advocate_type, \"respondant\"))\n  adv_f8ec926371c4 as var(func: eq(name, \"Mr. Vikramjit Banerjee\")) @filter(type(Advocate) AND eq(advocate_type, \"respondant\"))\n  duration_1f751a4cc656 as var(func: eq(duration, \"2022-02-11 to 2022-09-21\")) @filter(type(CaseDuration))\n  main_5 as var(func: eq(judgment_id, \"J_5\"))\n  cite_414e530b4c99 as var(func: eq(title, \"Kunwar Pal Singh v. State of Uttarakhand, (2014) 12 SCC 434\"))\n  cite_4d082c058459 as var(func: eq(title, \"Bhagwan Singh v. State of Uttarakhand, (2020) 14 SCC 184\"))\n  judge_8c9387ca7d9f as var(func: eq(name, \"Justice Hima Kohli\")) @filter(type(Judge))\n  judge_17babf394ab5 as var(func: eq(name, \"Justice J. B. Pardiwala\")) @filter(type(Judge))\n  judge_517d76dc853f as var(func: eq(name, \"Justice Surya Kant\")) @filter(type(Judge))\n  adv_b12648a4ec51 as var(func: eq(name, \"Mr. Arvind Datar\")) @filter(type(Advocate) AND eq(advocate_type, \"petitioner\"))\n  adv_f649c7f30bc5 as var(func: eq(name, \"Ms. Aparajita Singh\")) @filter(type(Advocate) AND eq(advocate_type, \"petitioner\"))\n  adv_fbf1a8def364 as var(func: eq(name, \"Mr. Ranjit Kumar\")) @filter(type(Advocate) AND eq(advocate_type, \"respondant\"))\n  duration_584dd495c70f as var(func: eq(duration, \"2018-09-12 to 2019-07-19\")) @filter(type(CaseDuration))\n  main_6 as var(func: eq(judgment_id, \"J_6\"))\n  cite_79b45c0d403b as var(func: eq(title, \"T. Arivandandam v. T.V. Satyapal [1978] 1 SCR 742 : (1977) 4 SCC 467 - held applicable.\"))\n  cite_a32d95f0207e as var(func: eq(title, \"Satti Paradesi Samadhi & Pillayar Temple v. M. Sankuntala [2014] 9 SCR 221 : (2015) 5 SCC 674\"))\n  judge_506a299665cd as var(func: eq(name, \"Justice K. M. Joseph\")) @filter(type(Judge))\n  judge_27756f5a523a as var(func: eq(name, \"Justice B. R. Gavai\")) @filter(type(Judge))\n  adv_fa44ad1b3dc1 as var(func: eq(name, \"Mr. C. A. Sundaram\")) @filter(type(Advocate) AND eq(advocate_type, \"petitioner\"))\n  adv_fbd891e84642 as var(func: eq(name, \"Mr. P. S. Narasimha\")) @filter(type(Advocate) AND eq(advocate_type, \"respondant\"))\n  adv_4676dbbc0131 as var(func: eq(name, \"Ms. Madhavi Divan\")) @filter(type(Advocate) AND eq(advocate_type, \"respondant\"))\n  duration_effb40d59fe0 as var(func: eq(duration, \"2019-11-10 to 2021-01-29\")) @filter(type(CaseDuration))\n  main_7 as var(func: eq(judgment_id, \"J_7\"))\n  main_8 as var(func: eq(judgment_id, \"J_8\"))\n  cite_9d2c71f1cd26 as var(func: eq(title, \"Dr Sonia Verma & Anr. v. The State of Haryana & Anr.\"))\n  judge_27c5d8969f52 as var(func: eq(name, \"Justice U. U. Lalit\")) @filter(type(Judge))\n  judge_9c1212fbdc2d as var(func: eq(name, \"Justice Hemant Gupta\")) @filter(type(Judge))\n  adv_df9d3980b599 as var(func: eq(name, \"Mr. Kapil Sibal\")) @filter(type(Advocate) AND eq(advocate_type, \"petitioner\"))\n  adv_7155b1d4dfba as var(func: eq(name, \"Mr. Harish Salve\")) @filter(type(Advocate) AND eq(advocate_type, \"respondant\"))\n  adv_1c36c1344caf as var(func: eq(name, \"Mr. Gopal Subramanium\")) @filter(type(Advocate) AND eq(advocate_type, \"respondant\"))\n  duration_ed15b6d7693a as var(func: eq(duration, \"2020-07-22 to 2021-08-18\")) @filter(type(CaseDuration))\n}",
+  "set": [
+    {
+      "uid": "uid(main_1)",
+      "judgment_id": "J_1",
+      "title": "M/s Rewa Tollway P. Ltd. v. The State of Madhya Pradesh & Ors.",
+      "doc_id": "doc_1",
+      "dgraph.type": "Judgment",
+      "year": 2024,
+      "processed_timestamp": "2025-11-10T13:27:46.270817",
+      "cites": [
+        {
+          "uid": "uid(cite_c8ef4cf7b354)"
+        },
+        {
+          "uid": "uid(cite_cf8d5292987f)"
+        },
+        {
+          "uid": "uid(cite_977c11ec14fb)"
+        }
+      ],
+      "judged_by": [
+        {
+          "uid": "uid(judge_ea7adefdc6b8)"
+        },
+        {
+          "uid": "uid(judge_06580d7652a6)"
+        },
+        {
+          "uid": "uid(judge_d3340d96750f)"
+        }
+      ],
+      "petitioner_represented_by": [
+        {
+          "uid": "uid(adv_eb6dad08caf7)"
+        },
+        {
+          "uid": "uid(adv_7fd263cf9570)"
+        }
+      ],
+      "respondant_represented_by": [
+        {
+          "uid": "uid(adv_96caa1fada7f)"
+        },
+        {
+          "uid": "uid(adv_b5acf30ec942)"
+        }
+      ],
+      "has_outcome": {
+        "uid": "uid(outcome_ea9157af292a)"
+      },
+      "has_case_duration": {
+        "uid": "uid(duration_628e8e7ffebc)"
+      }
+    },
+    {
+      "uid": "uid(main_2)",
+      "judgment_id": "J_2",
+      "title": "Kaushik Narsinhbhai Patel & Ors. v. M/s S.J.R. Prime Corporation Private Limited",
+      "doc_id": "doc_2",
+      "dgraph.type": "Judgment",
+      "year": 2024,
+      "processed_timestamp": "2025-11-10T13:29:03.205230",
+      "cites": [
+        {
+          "uid": "uid(cite_d9b49104805f)"
+        },
+        {
+          "uid": "uid(cite_bf01db58c8c3)"
+        },
+        {
+          "uid": "uid(cite_7f56d09bbc7c)"
+        }
+      ],
+      "judged_by": [
+        {
+          "uid": "uid(judge_313df3735b58)"
+        },
+        {
+          "uid": "uid(judge_32284f1797d2)"
+        }
+      ],
+      "petitioner_represented_by": [
+        {
+          "uid": "uid(adv_e1cd986ce44a)"
+        }
+      ],
+      "respondant_represented_by": [
+        {
+          "uid": "uid(adv_fdba8c8dc2b6)"
+        },
+        {
+          "uid": "uid(adv_cec1f1695283)"
+        }
+      ],
+      "has_outcome": {
+        "uid": "uid(outcome_4b5e1a039d2a)"
+      },
+      "has_case_duration": {
+        "uid": "uid(duration_c87be8f15dd7)"
+      }
+    },
+    {
+      "uid": "uid(main_3)",
+      "judgment_id": "J_3",
+      "title": "Mukesh v. The State of Madhya Pradesh & Anr.",
+      "doc_id": "doc_3",
+      "dgraph.type": "Judgment",
+      "year": 2024,
+      "processed_timestamp": "2025-11-10T13:28:37.263076",
+      "cites": [
+        {
+          "uid": "uid(cite_22758abd82dd)"
+        },
+        {
+          "uid": "uid(cite_112e5e71bd52)"
+        },
+        {
+          "uid": "uid(cite_1faf09a32754)"
+        }
+      ],
+      "judged_by": [
+        {
+          "uid": "uid(judge_da7911a877f7)"
+        },
+        {
+          "uid": "uid(judge_a2ba7562366e)"
+        },
+        {
+          "uid": "uid(judge_6189f58a9f19)"
+        }
+      ],
+      "petitioner_represented_by": [
+        {
+          "uid": "uid(adv_c961b5763979)"
+        },
+        {
+          "uid": "uid(adv_e6bd30275027)"
+        }
+      ],
+      "respondant_represented_by": [
+        {
+          "uid": "uid(adv_5603d437ff5d)"
+        }
+      ],
+      "has_outcome": {
+        "uid": "uid(outcome_ea9157af292a)"
+      },
+      "has_case_duration": {
+        "uid": "uid(duration_693c67138f10)"
+      }
+    },
+    {
+      "uid": "uid(main_4)",
+      "judgment_id": "J_4",
+      "title": "Amit Rana @ Koka & Anr. v. The State of Haryana",
+      "doc_id": "doc_4",
+      "dgraph.type": "Judgment",
+      "year": 2024,
+      "processed_timestamp": "2025-11-10T13:28:00.186733",
+      "cites": [
+        {
+          "uid": "uid(cite_c8ef4cf7b354)"
+        },
+        {
+          "uid": "uid(cite_fc612241514d)"
+        }
+      ],
+      "judged_by": [
+        {
+          "uid": "uid(judge_f91656ed55b5)"
+        },
+        {
+          "uid": "uid(judge_dc03a13184e6)"
+        },
+        {
+          "uid": "uid(judge_ee6134f6564c)"
+        }
+      ],
+      "petitioner_represented_by": [
+        {
+          "uid": "uid(adv_8c403aa30d79)"
+        }
+      ],
+      "respondant_represented_by": [
+        {
+          "uid": "uid(adv_7c001204688a)"
+        },
+        {
+          "uid": "uid(adv_f8ec926371c4)"
+        }
+      ],
+      "has_outcome": {
+        "uid": "uid(outcome_ea9157af292a)"
+      },
+      "has_case_duration": {
+        "uid": "uid(duration_1f751a4cc656)"
+      }
+    },
+    {
+      "uid": "uid(main_5)",
+      "judgment_id": "J_5",
+      "title": "Shahid Ali v. The State of Uttar Pradesh",
+      "doc_id": "doc_5",
+      "dgraph.type": "Judgment",
+      "year": 2024,
+      "processed_timestamp": "2025-11-10T13:29:28.255832",
+      "cites": [
+        {
+          "uid": "uid(cite_414e530b4c99)"
+        },
+        {
+          "uid": "uid(cite_4d082c058459)"
+        }
+      ],
+      "judged_by": [
+        {
+          "uid": "uid(judge_8c9387ca7d9f)"
+        },
+        {
+          "uid": "uid(judge_17babf394ab5)"
+        },
+        {
+          "uid": "uid(judge_517d76dc853f)"
+        }
+      ],
+      "petitioner_represented_by": [
+        {
+          "uid": "uid(adv_b12648a4ec51)"
+        },
+        {
+          "uid": "uid(adv_f649c7f30bc5)"
+        }
+      ],
+      "respondant_represented_by": [
+        {
+          "uid": "uid(adv_fbf1a8def364)"
+        }
+      ],
+      "has_outcome": {
+        "uid": "uid(outcome_ea9157af292a)"
+      },
+      "has_case_duration": {
+        "uid": "uid(duration_584dd495c70f)"
+      }
+    },
+    {
+      "uid": "uid(main_6)",
+      "judgment_id": "J_6",
+      "title": "Shri Mukund Bhavan Trust and Ors. v. Shrimant Chhatrapati Udayan Raje Pratapsinh Maharaj Bhonsle and Another",
+      "doc_id": "doc_6",
+      "dgraph.type": "Judgment",
+      "year": 2024,
+      "processed_timestamp": "2025-11-10T13:30:05.262965",
+      "cites": [
+        {
+          "uid": "uid(cite_79b45c0d403b)"
+        },
+        {
+          "uid": "uid(cite_a32d95f0207e)"
+        }
+      ],
+      "judged_by": [
+        {
+          "uid": "uid(judge_506a299665cd)"
+        },
+        {
+          "uid": "uid(judge_27756f5a523a)"
+        }
+      ],
+      "petitioner_represented_by": [
+        {
+          "uid": "uid(adv_fa44ad1b3dc1)"
+        }
+      ],
+      "respondant_represented_by": [
+        {
+          "uid": "uid(adv_fbd891e84642)"
+        },
+        {
+          "uid": "uid(adv_4676dbbc0131)"
+        }
+      ],
+      "has_outcome": {
+        "uid": "uid(outcome_4b5e1a039d2a)"
+      },
+      "has_case_duration": {
+        "uid": "uid(duration_effb40d59fe0)"
+      }
+    },
+    {
+      "uid": "uid(main_7)",
+      "judgment_id": "J_7",
+      "title": "M VS N",
+      "doc_id": "doc_7",
+      "dgraph.type": "Judgment",
+      "year": 2024,
+      "processed_timestamp": "2025-11-10T13:31:07.224017",
+      "cites": [
+        {
+          "uid": "uid(cite_c8ef4cf7b354)"
+        },
+        {
+          "uid": "uid(cite_fc612241514d)"
+        },
+        {
+          "uid": "uid(cite_cf8d5292987f)"
+        },
+        {
+          "uid": "uid(cite_977c11ec14fb)"
+        }
+      ],
+      "judged_by": [
+        {
+          "uid": "uid(judge_ea7adefdc6b8)"
+        },
+        {
+          "uid": "uid(judge_06580d7652a6)"
+        },
+        {
+          "uid": "uid(judge_d3340d96750f)"
+        }
+      ],
+      "petitioner_represented_by": [
+        {
+          "uid": "uid(adv_eb6dad08caf7)"
+        },
+        {
+          "uid": "uid(adv_7fd263cf9570)"
+        }
+      ],
+      "respondant_represented_by": [
+        {
+          "uid": "uid(adv_96caa1fada7f)"
+        },
+        {
+          "uid": "uid(adv_b5acf30ec942)"
+        }
+      ],
+      "has_outcome": {
+        "uid": "uid(outcome_ea9157af292a)"
+      },
+      "has_case_duration": {
+        "uid": "uid(duration_628e8e7ffebc)"
+      }
+    },
+    {
+      "uid": "uid(main_8)",
+      "judgment_id": "J_8",
+      "title": "Dr Sonia Verma & Anr. v. The State of Haryana & Anr.",
+      "doc_id": "doc_8",
+      "dgraph.type": "Judgment",
+      "year": 2024,
+      "processed_timestamp": "2025-11-10T13:30:30.222467",
+      "cites": [
+        {
+          "uid": "uid(cite_977c11ec14fb)"
+        },
+        {
+          "uid": "uid(cite_9d2c71f1cd26)"
+        }
+      ],
+      "judged_by": [
+        {
+          "uid": "uid(judge_27c5d8969f52)"
+        },
+        {
+          "uid": "uid(judge_9c1212fbdc2d)"
+        },
+        {
+          "uid": "uid(judge_ea7adefdc6b8)"
+        }
+      ],
+      "petitioner_represented_by": [
+        {
+          "uid": "uid(adv_df9d3980b599)"
+        }
+      ],
+      "respondant_represented_by": [
+        {
+          "uid": "uid(adv_7155b1d4dfba)"
+        },
+        {
+          "uid": "uid(adv_1c36c1344caf)"
+        }
+      ],
+      "has_outcome": {
+        "uid": "uid(outcome_4b5e1a039d2a)"
+      },
+      "has_case_duration": {
+        "uid": "uid(duration_ed15b6d7693a)"
+      }
+    },
+    {
+      "uid": "uid(cite_c8ef4cf7b354)",
+      "title": "State of Uttarakhand and Ors. v. Harpal Singh Rawat (2011) 4 SCC 575",
+      "dgraph.type": "Judgment"
+    },
+    {
+      "uid": "uid(cite_cf8d5292987f)",
+      "title": "Nasiruddin and another v. State of Uttar Pradesh Thr. Secretary and Ors. [2017] 12 SCR 1073 : (2018) 1 SCC 754",
+      "dgraph.type": "Judgment"
+    },
+    {
+      "uid": "uid(cite_977c11ec14fb)",
+      "title": "Paramjeet Batra v. State of Uttarakhand (2013) 11 SCC 673",
+      "dgraph.type": "Judgment"
+    },
+    {
+      "uid": "uid(cite_d9b49104805f)",
+      "title": "Nanda Dulal Pradhan & Anr. v. Dibakar Pradhan & Anr. [2022] 7 SCR 483 : 2022 SCC OnLine SC 822",
+      "dgraph.type": "Judgment"
+    },
+    {
+      "uid": "uid(cite_bf01db58c8c3)",
+      "title": "Nalini Sunder v. GV Sunder AIR 2003 Kar 86",
+      "dgraph.type": "Judgment"
+    },
+    {
+      "uid": "uid(cite_7f56d09bbc7c)",
+      "title": "R.V. Prasannakumaar & others. v. Mantri Castles Private Limited & Another [2019] 5 SCR 821 : (2020) 14 SCC 769",
+      "dgraph.type": "Judgment"
+    },
+    {
+      "uid": "uid(cite_22758abd82dd)",
+      "title": "Mohd. Yusuf v. Rajkumar [2020] 3 SCR 649 : (2020) 10 SCC 264",
+      "dgraph.type": "Judgment"
+    },
+    {
+      "uid": "uid(cite_112e5e71bd52)",
+      "title": "Ravinder Kaur Grewal and Others v. Manjit Kaur and Others [2019] 11 SCR 74 : (2019) 8 SCC 729",
+      "dgraph.type": "Judgment"
+    },
+    {
+      "uid": "uid(cite_1faf09a32754)",
+      "title": "Khushi Ram v. Nawal Singh [2021] 4 SCR 1019 : (2021) 16 SCC 279",
+      "dgraph.type": "Judgment"
+    },
+    {
+      "uid": "uid(cite_fc612241514d)",
+      "title": "M/s Rewa Tollway P. Ltd. v. The State of Madhya Pradesh & Ors.",
+      "dgraph.type": "Judgment"
+    },
+    {
+      "uid": "uid(cite_414e530b4c99)",
+      "title": "Kunwar Pal Singh v. State of Uttarakhand, (2014) 12 SCC 434",
+      "dgraph.type": "Judgment"
+    },
+    {
+      "uid": "uid(cite_4d082c058459)",
+      "title": "Bhagwan Singh v. State of Uttarakhand, (2020) 14 SCC 184",
+      "dgraph.type": "Judgment"
+    },
+    {
+      "uid": "uid(cite_79b45c0d403b)",
+      "title": "T. Arivandandam v. T.V. Satyapal [1978] 1 SCR 742 : (1977) 4 SCC 467 - held applicable.",
+      "dgraph.type": "Judgment"
+    },
+    {
+      "uid": "uid(cite_a32d95f0207e)",
+      "title": "Satti Paradesi Samadhi & Pillayar Temple v. M. Sankuntala [2014] 9 SCR 221 : (2015) 5 SCC 674",
+      "dgraph.type": "Judgment"
+    },
+    {
+      "uid": "uid(cite_9d2c71f1cd26)",
+      "title": "Dr Sonia Verma & Anr. v. The State of Haryana & Anr.",
+      "dgraph.type": "Judgment"
+    },
+    {
+      "uid": "uid(judge_ea7adefdc6b8)",
+      "judge_id": "judge_ea7adefdc6b8",
+      "name": "Justice D. Y. Chandrachud",
+      "dgraph.type": "Judge"
+    },
+    {
+      "uid": "uid(judge_06580d7652a6)",
+      "judge_id": "judge_06580d7652a6",
+      "name": "Justice Sanjay Kishan Kaul",
+      "dgraph.type": "Judge"
+    },
+    {
+      "uid": "uid(judge_d3340d96750f)",
+      "judge_id": "judge_d3340d96750f",
+      "name": "Justice Indu Malhotra",
+      "dgraph.type": "Judge"
+    },
+    {
+      "uid": "uid(judge_313df3735b58)",
+      "judge_id": "judge_313df3735b58",
+      "name": "Justice A. S. Bopanna",
+      "dgraph.type": "Judge"
+    },
+    {
+      "uid": "uid(judge_32284f1797d2)",
+      "judge_id": "judge_32284f1797d2",
+      "name": "Justice S. Abdul Nazeer",
+      "dgraph.type": "Judge"
+    },
+    {
+      "uid": "uid(judge_da7911a877f7)",
+      "judge_id": "judge_da7911a877f7",
+      "name": "Justice R. Banumathi",
+      "dgraph.type": "Judge"
+    },
+    {
+      "uid": "uid(judge_a2ba7562366e)",
+      "judge_id": "judge_a2ba7562366e",
+      "name": "Justice V. Ramasubramanian",
+      "dgraph.type": "Judge"
+    },
+    {
+      "uid": "uid(judge_6189f58a9f19)",
+      "judge_id": "judge_6189f58a9f19",
+      "name": "Justice Bela M. Trivedi",
+      "dgraph.type": "Judge"
+    },
+    {
+      "uid": "uid(judge_f91656ed55b5)",
+      "judge_id": "judge_f91656ed55b5",
+      "name": "Justice Krishna Murari",
+      "dgraph.type": "Judge"
+    },
+    {
+      "uid": "uid(judge_dc03a13184e6)",
+      "judge_id": "judge_dc03a13184e6",
+      "name": "Justice P. S. Narasimha",
+      "dgraph.type": "Judge"
+    },
+    {
+      "uid": "uid(judge_ee6134f6564c)",
+      "judge_id": "judge_ee6134f6564c",
+      "name": "Justice Aniruddha Bose",
+      "dgraph.type": "Judge"
+    },
+    {
+      "uid": "uid(judge_8c9387ca7d9f)",
+      "judge_id": "judge_8c9387ca7d9f",
+      "name": "Justice Hima Kohli",
+      "dgraph.type": "Judge"
+    },
+    {
+      "uid": "uid(judge_17babf394ab5)",
+      "judge_id": "judge_17babf394ab5",
+      "name": "Justice J. B. Pardiwala",
+      "dgraph.type": "Judge"
+    },
+    {
+      "uid": "uid(judge_517d76dc853f)",
+      "judge_id": "judge_517d76dc853f",
+      "name": "Justice Surya Kant",
+      "dgraph.type": "Judge"
+    },
+    {
+      "uid": "uid(judge_506a299665cd)",
+      "judge_id": "judge_506a299665cd",
+      "name": "Justice K. M. Joseph",
+      "dgraph.type": "Judge"
+    },
+    {
+      "uid": "uid(judge_27756f5a523a)",
+      "judge_id": "judge_27756f5a523a",
+      "name": "Justice B. R. Gavai",
+      "dgraph.type": "Judge"
+    },
+    {
+      "uid": "uid(judge_27c5d8969f52)",
+      "judge_id": "judge_27c5d8969f52",
+      "name": "Justice U. U. Lalit",
+      "dgraph.type": "Judge"
+    },
+    {
+      "uid": "uid(judge_9c1212fbdc2d)",
+      "judge_id": "judge_9c1212fbdc2d",
+      "name": "Justice Hemant Gupta",
+      "dgraph.type": "Judge"
+    },
+    {
+      "uid": "uid(adv_eb6dad08caf7)",
+      "advocate_id": "adv_eb6dad08caf7",
+      "name": "Mr. Mukul Rohatgi",
+      "advocate_type": "petitioner",
+      "dgraph.type": "Advocate"
+    },
+    {
+      "uid": "uid(adv_7fd263cf9570)",
+      "advocate_id": "adv_7fd263cf9570",
+      "name": "Ms. Meenakshi Arora",
+      "advocate_type": "petitioner",
+      "dgraph.type": "Advocate"
+    },
+    {
+      "uid": "uid(adv_96caa1fada7f)",
+      "advocate_id": "adv_96caa1fada7f",
+      "name": "Mr. Tushar Mehta",
+      "advocate_type": "respondant",
+      "dgraph.type": "Advocate"
+    },
+    {
+      "uid": "uid(adv_b5acf30ec942)",
+      "advocate_id": "adv_b5acf30ec942",
+      "name": "Mr. Aman Lekhi",
+      "advocate_type": "respondant",
+      "dgraph.type": "Advocate"
+    },
+    {
+      "uid": "uid(adv_e1cd986ce44a)",
+      "advocate_id": "adv_e1cd986ce44a",
+      "name": "Mr. Shyam Divan",
+      "advocate_type": "petitioner",
+      "dgraph.type": "Advocate"
+    },
+    {
+      "uid": "uid(adv_fdba8c8dc2b6)",
+      "advocate_id": "adv_fdba8c8dc2b6",
+      "name": "Ms. Pinky Anand",
+      "advocate_type": "respondant",
+      "dgraph.type": "Advocate"
+    },
+    {
+      "uid": "uid(adv_cec1f1695283)",
+      "advocate_id": "adv_cec1f1695283",
+      "name": "Mr. Rakesh Dwivedi",
+      "advocate_type": "respondant",
+      "dgraph.type": "Advocate"
+    },
+    {
+      "uid": "uid(adv_c961b5763979)",
+      "advocate_id": "adv_c961b5763979",
+      "name": "Mr. Abhishek Manu Singhvi",
+      "advocate_type": "petitioner",
+      "dgraph.type": "Advocate"
+    },
+    {
+      "uid": "uid(adv_e6bd30275027)",
+      "advocate_id": "adv_e6bd30275027",
+      "name": "Ms. Karuna Nundy",
+      "advocate_type": "petitioner",
+      "dgraph.type": "Advocate"
+    },
+    {
+      "uid": "uid(adv_5603d437ff5d)",
+      "advocate_id": "adv_5603d437ff5d",
+      "name": "Mr. K. K. Venugopal",
+      "advocate_type": "respondant",
+      "dgraph.type": "Advocate"
+    },
+    {
+      "uid": "uid(adv_8c403aa30d79)",
+      "advocate_id": "adv_8c403aa30d79",
+      "name": "Mr. Sidharth Luthra",
+      "advocate_type": "petitioner",
+      "dgraph.type": "Advocate"
+    },
+    {
+      "uid": "uid(adv_7c001204688a)",
+      "advocate_id": "adv_7c001204688a",
+      "name": "Mr. Maninder Singh",
+      "advocate_type": "respondant",
+      "dgraph.type": "Advocate"
+    },
+    {
+      "uid": "uid(adv_f8ec926371c4)",
+      "advocate_id": "adv_f8ec926371c4",
+      "name": "Mr. Vikramjit Banerjee",
+      "advocate_type": "respondant",
+      "dgraph.type": "Advocate"
+    },
+    {
+      "uid": "uid(adv_b12648a4ec51)",
+      "advocate_id": "adv_b12648a4ec51",
+      "name": "Mr. Arvind Datar",
+      "advocate_type": "petitioner",
+      "dgraph.type": "Advocate"
+    },
+    {
+      "uid": "uid(adv_f649c7f30bc5)",
+      "advocate_id": "adv_f649c7f30bc5",
+      "name": "Ms. Aparajita Singh",
+      "advocate_type": "petitioner",
+      "dgraph.type": "Advocate"
+    },
+    {
+      "uid": "uid(adv_fbf1a8def364)",
+      "advocate_id": "adv_fbf1a8def364",
+      "name": "Mr. Ranjit Kumar",
+      "advocate_type": "respondant",
+      "dgraph.type": "Advocate"
+    },
+    {
+      "uid": "uid(adv_fa44ad1b3dc1)",
+      "advocate_id": "adv_fa44ad1b3dc1",
+      "name": "Mr. C. A. Sundaram",
+      "advocate_type": "petitioner",
+      "dgraph.type": "Advocate"
+    },
+    {
+      "uid": "uid(adv_fbd891e84642)",
+      "advocate_id": "adv_fbd891e84642",
+      "name": "Mr. P. S. Narasimha",
+      "advocate_type": "respondant",
+      "dgraph.type": "Advocate"
+    },
+    {
+      "uid": "uid(adv_4676dbbc0131)",
+      "advocate_id": "adv_4676dbbc0131",
+      "name": "Ms. Madhavi Divan",
+      "advocate_type": "respondant",
+      "dgraph.type": "Advocate"
+    },
+    {
+      "uid": "uid(adv_df9d3980b599)",
+      "advocate_id": "adv_df9d3980b599",
+      "name": "Mr. Kapil Sibal",
+      "advocate_type": "petitioner",
+      "dgraph.type": "Advocate"
+    },
+    {
+      "uid": "uid(adv_7155b1d4dfba)",
+      "advocate_id": "adv_7155b1d4dfba",
+      "name": "Mr. Harish Salve",
+      "advocate_type": "respondant",
+      "dgraph.type": "Advocate"
+    },
+    {
+      "uid": "uid(adv_1c36c1344caf)",
+      "advocate_id": "adv_1c36c1344caf",
+      "name": "Mr. Gopal Subramanium",
+      "advocate_type": "respondant",
+      "dgraph.type": "Advocate"
+    },
+    {
+      "uid": "uid(outcome_ea9157af292a)",
+      "outcome_id": "outcome_ea9157af292a",
+      "name": "Petitioner Won",
+      "dgraph.type": "Outcome"
+    },
+    {
+      "uid": "uid(outcome_4b5e1a039d2a)",
+      "outcome_id": "outcome_4b5e1a039d2a",
+      "name": "Respondent Won",
+      "dgraph.type": "Outcome"
+    },
+    {
+      "uid": "uid(duration_628e8e7ffebc)",
+      "case_duration_id": "duration_628e8e7ffebc",
+      "duration": "2019-03-15 to 2019-11-18",
+      "dgraph.type": "CaseDuration"
+    },
+    {
+      "uid": "uid(duration_c87be8f15dd7)",
+      "case_duration_id": "duration_c87be8f15dd7",
+      "duration": "2020-04-10 to 2021-01-24",
+      "dgraph.type": "CaseDuration"
+    },
+    {
+      "uid": "uid(duration_693c67138f10)",
+      "case_duration_id": "duration_693c67138f10",
+      "duration": "2021-01-05 to 2021-06-30",
+      "dgraph.type": "CaseDuration"
+    },
+    {
+      "uid": "uid(duration_1f751a4cc656)",
+      "case_duration_id": "duration_1f751a4cc656",
+      "duration": "2022-02-11 to 2022-09-21",
+      "dgraph.type": "CaseDuration"
+    },
+    {
+      "uid": "uid(duration_584dd495c70f)",
+      "case_duration_id": "duration_584dd495c70f",
+      "duration": "2018-09-12 to 2019-07-19",
+      "dgraph.type": "CaseDuration"
+    },
+    {
+      "uid": "uid(duration_effb40d59fe0)",
+      "case_duration_id": "duration_effb40d59fe0",
+      "duration": "2019-11-10 to 2021-01-29",
+      "dgraph.type": "CaseDuration"
+    },
+    {
+      "uid": "uid(duration_ed15b6d7693a)",
+      "case_duration_id": "duration_ed15b6d7693a",
+      "duration": "2020-07-22 to 2021-08-18",
+      "dgraph.type": "CaseDuration"
+    }
+  ]
+}
