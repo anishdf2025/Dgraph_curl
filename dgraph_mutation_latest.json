@@ -1,11 +1,60 @@
 {
-  "query": "{\n  main_1 as var(func: eq(judgment_id, \"J_doc_yOTGbJoBE4wsznJVdsE7\"))\n  cite_d9b49104805f as var(func: eq(title, \"Nanda Dulal Pradhan & Anr. v. Dibakar Pradhan & Anr. [2022] 7 SCR 483 : 2022 SCC OnLine SC 822\"))\n  cite_bf01db58c8c3 as var(func: eq(title, \"Nalini Sunder v. GV Sunder AIR 2003 Kar 86\"))\n  cite_7f56d09bbc7c as var(func: eq(title, \"R.V. Prasannakumaar & others. v. Mantri Castles Private Limited & Another [2019] 5 SCR 821 : (2020) 14 SCC 769\"))\n  judge_313df3735b58 as var(func: eq(name, \"Justice A. S. Bopanna\")) @filter(type(Judge))\n  judge_32284f1797d2 as var(func: eq(name, \"Justice S. Abdul Nazeer\")) @filter(type(Judge))\n  adv_e1cd986ce44a as var(func: eq(name, \"Mr. Shyam Divan\")) @filter(type(Advocate) AND eq(advocate_type, \"petitioner\"))\n  adv_fdba8c8dc2b6 as var(func: eq(name, \"Ms. Pinky Anand\")) @filter(type(Advocate) AND eq(advocate_type, \"respondant\"))\n  adv_cec1f1695283 as var(func: eq(name, \"Mr. Rakesh Dwivedi\")) @filter(type(Advocate) AND eq(advocate_type, \"respondant\"))\n  outcome_4b5e1a039d2a as var(func: eq(name, \"Respondent Won\")) @filter(type(Outcome))\n  duration_c87be8f15dd7 as var(func: eq(duration, \"2020-04-10 to 2021-01-24\")) @filter(type(CaseDuration))\n}",
+  "query": "{\n  main_1 as var(func: eq(judgment_id, \"J_yeTGbJoBE4wsznJV68Fw\"))\n  cite_414e530b4c99 as var(func: eq(title, \"Kunwar Pal Singh v. State of Uttarakhand, (2014) 12 SCC 434\"))\n  cite_4d082c058459 as var(func: eq(title, \"Bhagwan Singh v. State of Uttarakhand, (2020) 14 SCC 184\"))\n  judge_8c9387ca7d9f as var(func: eq(name, \"Justice Hima Kohli\")) @filter(type(Judge))\n  judge_17babf394ab5 as var(func: eq(name, \"Justice J. B. Pardiwala\")) @filter(type(Judge))\n  judge_517d76dc853f as var(func: eq(name, \"Justice Surya Kant\")) @filter(type(Judge))\n  adv_b12648a4ec51 as var(func: eq(name, \"Mr. Arvind Datar\")) @filter(type(Advocate) AND eq(advocate_type, \"petitioner\"))\n  adv_f649c7f30bc5 as var(func: eq(name, \"Ms. Aparajita Singh\")) @filter(type(Advocate) AND eq(advocate_type, \"petitioner\"))\n  adv_fbf1a8def364 as var(func: eq(name, \"Mr. Ranjit Kumar\")) @filter(type(Advocate) AND eq(advocate_type, \"respondant\"))\n  outcome_ea9157af292a as var(func: eq(name, \"Petitioner Won\")) @filter(type(Outcome))\n  duration_584dd495c70f as var(func: eq(duration, \"2018-09-12 to 2019-07-19\")) @filter(type(CaseDuration))\n  court_c856d8650786 as var(func: eq(name, \"Supreme Court of India\")) @filter(type(Court) AND eq(location, \"New Delhi\"))\n  main_2 as var(func: eq(judgment_id, \"J_yOTGbJoBE4wsznJVdsE7\"))\n  cite_d9b49104805f as var(func: eq(title, \"Nanda Dulal Pradhan & Anr. v. Dibakar Pradhan & Anr. [2022] 7 SCR 483 : 2022 SCC OnLine SC 822\"))\n  cite_bf01db58c8c3 as var(func: eq(title, \"Nalini Sunder v. GV Sunder AIR 2003 Kar 86\"))\n  cite_7f56d09bbc7c as var(func: eq(title, \"R.V. Prasannakumaar & others. v. Mantri Castles Private Limited & Another [2019] 5 SCR 821 : (2020) 14 SCC 769\"))\n  judge_313df3735b58 as var(func: eq(name, \"Justice A. S. Bopanna\")) @filter(type(Judge))\n  judge_32284f1797d2 as var(func: eq(name, \"Justice S. Abdul Nazeer\")) @filter(type(Judge))\n  adv_e1cd986ce44a as var(func: eq(name, \"Mr. Shyam Divan\")) @filter(type(Advocate) AND eq(advocate_type, \"petitioner\"))\n  adv_fdba8c8dc2b6 as var(func: eq(name, \"Ms. Pinky Anand\")) @filter(type(Advocate) AND eq(advocate_type, \"respondant\"))\n  adv_cec1f1695283 as var(func: eq(name, \"Mr. Rakesh Dwivedi\")) @filter(type(Advocate) AND eq(advocate_type, \"respondant\"))\n  outcome_4b5e1a039d2a as var(func: eq(name, \"Respondent Won\")) @filter(type(Outcome))\n  duration_c87be8f15dd7 as var(func: eq(duration, \"2020-04-10 to 2021-01-24\")) @filter(type(CaseDuration))\n  main_3 as var(func: eq(judgment_id, \"J_x-TGbJoBE4wsznJVAcEG\"))\n  cite_22758abd82dd as var(func: eq(title, \"Mohd. Yusuf v. Rajkumar [2020] 3 SCR 649 : (2020) 10 SCC 264\"))\n  cite_112e5e71bd52 as var(func: eq(title, \"Ravinder Kaur Grewal and Others v. Manjit Kaur and Others [2019] 11 SCR 74 : (2019) 8 SCC 729\"))\n  cite_1faf09a32754 as var(func: eq(title, \"Khushi Ram v. Nawal Singh [2021] 4 SCR 1019 : (2021) 16 SCC 279\"))\n  judge_da7911a877f7 as var(func: eq(name, \"Justice R. Banumathi\")) @filter(type(Judge))\n  judge_a2ba7562366e as var(func: eq(name, \"Justice V. Ramasubramanian\")) @filter(type(Judge))\n  judge_6189f58a9f19 as var(func: eq(name, \"Justice Bela M. Trivedi\")) @filter(type(Judge))\n  adv_c961b5763979 as var(func: eq(name, \"Mr. Abhishek Manu Singhvi\")) @filter(type(Advocate) AND eq(advocate_type, \"petitioner\"))\n  adv_e6bd30275027 as var(func: eq(name, \"Ms. Karuna Nundy\")) @filter(type(Advocate) AND eq(advocate_type, \"petitioner\"))\n  adv_5603d437ff5d as var(func: eq(name, \"Mr. K. K. Venugopal\")) @filter(type(Advocate) AND eq(advocate_type, \"respondant\"))\n  duration_693c67138f10 as var(func: eq(duration, \"2021-01-05 to 2021-06-30\")) @filter(type(CaseDuration))\n}",
   "set": [
     {
       "uid": "uid(main_1)",
-      "judgment_id": "J_doc_yOTGbJoBE4wsznJVdsE7",
+      "judgment_id": "J_yeTGbJoBE4wsznJV68Fw",
+      "title": "Shahid Ali v. The State of Uttar Pradesh",
+      "doc_id": "yeTGbJoBE4wsznJV68Fw",
+      "dgraph.type": "Judgment",
+      "year": 2024,
+      "cites": [
+        {
+          "uid": "uid(cite_414e530b4c99)"
+        },
+        {
+          "uid": "uid(cite_4d082c058459)"
+        }
+      ],
+      "judged_by": [
+        {
+          "uid": "uid(judge_8c9387ca7d9f)"
+        },
+        {
+          "uid": "uid(judge_17babf394ab5)"
+        },
+        {
+          "uid": "uid(judge_517d76dc853f)"
+        }
+      ],
+      "petitioner_represented_by": [
+        {
+          "uid": "uid(adv_b12648a4ec51)"
+        },
+        {
+          "uid": "uid(adv_f649c7f30bc5)"
+        }
+      ],
+      "respondant_represented_by": [
+        {
+          "uid": "uid(adv_fbf1a8def364)"
+        }
+      ],
+      "has_outcome": {
+        "uid": "uid(outcome_ea9157af292a)"
+      },
+      "has_case_duration": {
+        "uid": "uid(duration_584dd495c70f)"
+      },
+      "court_heard_in": {
+        "uid": "uid(court_c856d8650786)"
+      }
+    },
+    {
+      "uid": "uid(main_2)",
+      "judgment_id": "J_yOTGbJoBE4wsznJVdsE7",
       "title": "Kaushik Narsinhbhai Patel & Ors. v. M/s S.J.R. Prime Corporation Private Limited",
-      "doc_id": "doc_yOTGbJoBE4wsznJVdsE7",
+      "doc_id": "yOTGbJoBE4wsznJVdsE7",
       "dgraph.type": "Judgment",
       "year": 2024,
       "processed_timestamp": "2025-11-10T13:29:03.205230",
@@ -46,7 +95,73 @@
       },
       "has_case_duration": {
         "uid": "uid(duration_c87be8f15dd7)"
+      },
+      "court_heard_in": {
+        "uid": "uid(court_c856d8650786)"
       }
+    },
+    {
+      "uid": "uid(main_3)",
+      "judgment_id": "J_x-TGbJoBE4wsznJVAcEG",
+      "title": "Mukesh v. The State of Madhya Pradesh & Anr.",
+      "doc_id": "x-TGbJoBE4wsznJVAcEG",
+      "dgraph.type": "Judgment",
+      "year": 2024,
+      "processed_timestamp": "2025-11-10T13:28:37.263076",
+      "cites": [
+        {
+          "uid": "uid(cite_22758abd82dd)"
+        },
+        {
+          "uid": "uid(cite_112e5e71bd52)"
+        },
+        {
+          "uid": "uid(cite_1faf09a32754)"
+        }
+      ],
+      "judged_by": [
+        {
+          "uid": "uid(judge_da7911a877f7)"
+        },
+        {
+          "uid": "uid(judge_a2ba7562366e)"
+        },
+        {
+          "uid": "uid(judge_6189f58a9f19)"
+        }
+      ],
+      "petitioner_represented_by": [
+        {
+          "uid": "uid(adv_c961b5763979)"
+        },
+        {
+          "uid": "uid(adv_e6bd30275027)"
+        }
+      ],
+      "respondant_represented_by": [
+        {
+          "uid": "uid(adv_5603d437ff5d)"
+        }
+      ],
+      "has_outcome": {
+        "uid": "uid(outcome_ea9157af292a)"
+      },
+      "has_case_duration": {
+        "uid": "uid(duration_693c67138f10)"
+      },
+      "court_heard_in": {
+        "uid": "uid(court_c856d8650786)"
+      }
+    },
+    {
+      "uid": "uid(cite_414e530b4c99)",
+      "title": "Kunwar Pal Singh v. State of Uttarakhand, (2014) 12 SCC 434",
+      "dgraph.type": "Judgment"
+    },
+    {
+      "uid": "uid(cite_4d082c058459)",
+      "title": "Bhagwan Singh v. State of Uttarakhand, (2020) 14 SCC 184",
+      "dgraph.type": "Judgment"
     },
     {
       "uid": "uid(cite_d9b49104805f)",
@@ -64,6 +179,39 @@
       "dgraph.type": "Judgment"
     },
     {
+      "uid": "uid(cite_22758abd82dd)",
+      "title": "Mohd. Yusuf v. Rajkumar [2020] 3 SCR 649 : (2020) 10 SCC 264",
+      "dgraph.type": "Judgment"
+    },
+    {
+      "uid": "uid(cite_112e5e71bd52)",
+      "title": "Ravinder Kaur Grewal and Others v. Manjit Kaur and Others [2019] 11 SCR 74 : (2019) 8 SCC 729",
+      "dgraph.type": "Judgment"
+    },
+    {
+      "uid": "uid(cite_1faf09a32754)",
+      "title": "Khushi Ram v. Nawal Singh [2021] 4 SCR 1019 : (2021) 16 SCC 279",
+      "dgraph.type": "Judgment"
+    },
+    {
+      "uid": "uid(judge_8c9387ca7d9f)",
+      "judge_id": "judge_8c9387ca7d9f",
+      "name": "Justice Hima Kohli",
+      "dgraph.type": "Judge"
+    },
+    {
+      "uid": "uid(judge_17babf394ab5)",
+      "judge_id": "judge_17babf394ab5",
+      "name": "Justice J. B. Pardiwala",
+      "dgraph.type": "Judge"
+    },
+    {
+      "uid": "uid(judge_517d76dc853f)",
+      "judge_id": "judge_517d76dc853f",
+      "name": "Justice Surya Kant",
+      "dgraph.type": "Judge"
+    },
+    {
       "uid": "uid(judge_313df3735b58)",
       "judge_id": "judge_313df3735b58",
       "name": "Justice A. S. Bopanna",
@@ -74,6 +222,45 @@
       "judge_id": "judge_32284f1797d2",
       "name": "Justice S. Abdul Nazeer",
       "dgraph.type": "Judge"
+    },
+    {
+      "uid": "uid(judge_da7911a877f7)",
+      "judge_id": "judge_da7911a877f7",
+      "name": "Justice R. Banumathi",
+      "dgraph.type": "Judge"
+    },
+    {
+      "uid": "uid(judge_a2ba7562366e)",
+      "judge_id": "judge_a2ba7562366e",
+      "name": "Justice V. Ramasubramanian",
+      "dgraph.type": "Judge"
+    },
+    {
+      "uid": "uid(judge_6189f58a9f19)",
+      "judge_id": "judge_6189f58a9f19",
+      "name": "Justice Bela M. Trivedi",
+      "dgraph.type": "Judge"
+    },
+    {
+      "uid": "uid(adv_b12648a4ec51)",
+      "advocate_id": "adv_b12648a4ec51",
+      "name": "Mr. Arvind Datar",
+      "advocate_type": "petitioner",
+      "dgraph.type": "Advocate"
+    },
+    {
+      "uid": "uid(adv_f649c7f30bc5)",
+      "advocate_id": "adv_f649c7f30bc5",
+      "name": "Ms. Aparajita Singh",
+      "advocate_type": "petitioner",
+      "dgraph.type": "Advocate"
+    },
+    {
+      "uid": "uid(adv_fbf1a8def364)",
+      "advocate_id": "adv_fbf1a8def364",
+      "name": "Mr. Ranjit Kumar",
+      "advocate_type": "respondant",
+      "dgraph.type": "Advocate"
     },
     {
       "uid": "uid(adv_e1cd986ce44a)",
@@ -97,16 +284,63 @@
       "dgraph.type": "Advocate"
     },
     {
+      "uid": "uid(adv_c961b5763979)",
+      "advocate_id": "adv_c961b5763979",
+      "name": "Mr. Abhishek Manu Singhvi",
+      "advocate_type": "petitioner",
+      "dgraph.type": "Advocate"
+    },
+    {
+      "uid": "uid(adv_e6bd30275027)",
+      "advocate_id": "adv_e6bd30275027",
+      "name": "Ms. Karuna Nundy",
+      "advocate_type": "petitioner",
+      "dgraph.type": "Advocate"
+    },
+    {
+      "uid": "uid(adv_5603d437ff5d)",
+      "advocate_id": "adv_5603d437ff5d",
+      "name": "Mr. K. K. Venugopal",
+      "advocate_type": "respondant",
+      "dgraph.type": "Advocate"
+    },
+    {
+      "uid": "uid(outcome_ea9157af292a)",
+      "outcome_id": "outcome_ea9157af292a",
+      "name": "Petitioner Won",
+      "dgraph.type": "Outcome"
+    },
+    {
       "uid": "uid(outcome_4b5e1a039d2a)",
       "outcome_id": "outcome_4b5e1a039d2a",
       "name": "Respondent Won",
       "dgraph.type": "Outcome"
     },
     {
+      "uid": "uid(duration_584dd495c70f)",
+      "case_duration_id": "duration_584dd495c70f",
+      "duration": "2018-09-12 to 2019-07-19",
+      "dgraph.type": "CaseDuration"
+    },
+    {
       "uid": "uid(duration_c87be8f15dd7)",
       "case_duration_id": "duration_c87be8f15dd7",
       "duration": "2020-04-10 to 2021-01-24",
       "dgraph.type": "CaseDuration"
+    },
+    {
+      "uid": "uid(duration_693c67138f10)",
+      "case_duration_id": "duration_693c67138f10",
+      "duration": "2021-01-05 to 2021-06-30",
+      "dgraph.type": "CaseDuration"
+    },
+    {
+      "uid": "uid(court_c856d8650786)",
+      "court_id": "court_c856d8650786",
+      "name": "Supreme Court of India",
+      "dgraph.type": "Court",
+      "location": "New Delhi",
+      "bench_type": "Division Bench"
     }
   ]
 }

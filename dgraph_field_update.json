@@ -1,0 +1,19 @@
+{
+  "query": "{\n  court_c856d8650786 as var(func: eq(name, \"Supreme Court of India\")) @filter(type(Court) AND eq(location, \"New Delhi\"))\n  main_1 as var(func: eq(judgment_id, \"J_x-TGbJoBE4wsznJVAcEG\"))\n}",
+  "set": [
+    {
+      "uid": "uid(court_c856d8650786)",
+      "court_id": "court_c856d8650786",
+      "name": "Supreme Court of India",
+      "dgraph.type": "Court",
+      "bench_type": "Division Bench",
+      "location": "New Delhi"
+    },
+    {
+      "uid": "uid(main_1)",
+      "court_heard_in": {
+        "uid": "uid(court_c856d8650786)"
+      }
+    }
+  ]
+}
