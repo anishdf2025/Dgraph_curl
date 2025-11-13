@@ -120,18 +120,8 @@ def mark_documents_processed(es: Elasticsearch, documents: List[Dict], entity_ty
         for doc in documents:
             if entity_types:
                 # Granular entity-level tracking
-                update_body = {
-                    "doc": {
-                        "processed_entities": {},
-                        "last_dgraph_update": timestamp
-                    }
-                }
-                
-                # Mark each entity type as processed
-                for entity_type in entity_types:
-                    update_body["doc"]["processed_entities"][entity_type] = True
-                
                 # Use scripted update to merge with existing processed_entities
+                # AND set processed_to_dgraph to true to prevent reprocessing
                 es.update(
                     index=ES_INDEX_NAME,
                     id=doc['_id'],
@@ -145,6 +135,8 @@ def mark_documents_processed(es: Elasticsearch, documents: List[Dict], entity_ty
                                     ctx._source.processed_entities[entry.getKey()] = entry.getValue();
                                 }
                                 ctx._source.last_dgraph_update = params.timestamp;
+                                ctx._source.processed_to_dgraph = true;
+                                ctx._source.dgraph_processed_at = params.timestamp;
                             """,
                             "params": {
                                 "entities": {et: True for et in entity_types},

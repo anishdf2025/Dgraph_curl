@@ -123,8 +123,28 @@ async def process_now():
         if not upload_to_dgraph(mutation, retry=True):
             raise HTTPException(status_code=500, detail="Failed to upload to Dgraph after retries")
         
-        # Mark as processed
-        if not mark_documents_processed(es, documents):
+        # Define all entity types being processed
+        entity_types = [
+            'judgment',
+            'citations', 
+            'judges',
+            'advocates',
+            'outcome',
+            'case_duration',
+            'court',
+            'decision_date',
+            'filing_date',
+            'petitioner_party',
+            'respondant_party',
+            'case_number',
+            'summary',
+            'case_type',
+            'neutral_citation',
+            'acts'
+        ]
+        
+        # Mark as processed with entity tracking
+        if not mark_documents_processed(es, documents, entity_types):
             raise HTTPException(status_code=500, detail="Failed to mark documents as processed")
         
         monitor_state["total_processed"] += len(documents)

@@ -38,3 +38,8 @@ curl -X POST "http://localhost:9200/graphdb/_doc/xeTFbJoBE4wsznJVFsGb" -H 'Conte
 }'
 
 
+uvicorn main:app --host 0.0.0.0 --port 8005 --reload
+for new run this 
+python update_specific_field.py --field court_bench
+
+
