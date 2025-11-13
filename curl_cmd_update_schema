@@ -1,0 +1,45 @@
+curl -X POST "http://localhost:8180/alter" -H "Content-Type: text/plain" -d '
+type Court {
+  court_id
+  name
+  location
+}
+
+court_id: string @index(exact) @upsert .
+location: string @index(term) .
+court_heard_in: uid @reverse .
+'
+
+
+curl -X POST "http://localhost:9200/graphdb/_doc/xeTFbJoBE4wsznJVFsGb" -H 'Content-Type: application/json' -d'
+{
+  "title": "Asha Devi v. Delhi Police",
+  "outcome": "Respondent Won",
+  "case_duration": "2019-06-10 to 2020-01-25",
+  "year": 2020,
+  "citations": [
+    "Lalita Kumari v. Govt. of U.P., (2014) 2 SCC 1",
+    "State of Haryana v. Bhajan Lal, 1992 Supp (1) SCC 335"
+  ],
+  "judges": [
+    "Justice Indira Banerjee",
+    "Justice Sanjay Kishan Kaul"
+  ],
+  "petitioner_advocates": [
+    "Ms. Karuna Nundy"
+  ],
+  "respondant_advocates": [
+    "Mr. Maninder Singh"
+  ],
+  "court": "Supreme Court of India",
+  "court_location": "New Delhi",
+  "court_bench": "Division Bench",
+  "processed_timestamp": "2025-11-10T15:03:18.124589"
+}'
+
+
+uvicorn main:app --host 0.0.0.0 --port 8005 --reload
+for new run this 
+python update_specific_field.py --field court_bench
+
+
