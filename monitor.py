@@ -9,9 +9,10 @@ from datetime import datetime
 
 from config import CHECK_INTERVAL
 from models import monitor_state
-from elasticsearch_client import connect_to_elasticsearch, fetch_unprocessed_documents, mark_documents_processed
+from elasticsearch_client import connect_to_elasticsearch, fetch_unprocessed_documents, mark_documents_with_per_doc_entities
 from dgraph_client import apply_dgraph_schema, upload_to_dgraph
 from mutation_builder import build_dgraph_mutation
+from entity_detector import detect_entities_in_batch
 
 logger = logging.getLogger(__name__)
 
@@ -43,33 +44,17 @@ async def monitor_and_process():
                     await asyncio.sleep(CHECK_INTERVAL)
                     continue
                 
+                # Detect which entities exist in each document
+                doc_entities = detect_entities_in_batch(documents)
+                
                 # Build mutation
                 mutation = build_dgraph_mutation(documents)
                 
-                # Define all entity types being processed
-                entity_types = [
-                    'judgment',
-                    'citations', 
-                    'judges',
-                    'advocates',
-                    'outcome',
-                    'case_duration',
-                    'court',
-                    'decision_date',
-                    'filing_date',
-                    'petitioner_party',
-                    'respondant_party',
-                    'case_number',
-                    'summary',
-                    'case_type',
-                    'neutral_citation',
-                    'acts'
-                ]
-                
                 # Upload to Dgraph (with retry)
                 if upload_to_dgraph(mutation, retry=True):
-                    # Mark as processed with granular entity tracking
-                    if mark_documents_processed(es, documents, entity_types):
+                    # Mark as processed with per-document entity tracking
+                    # Only mark entities that actually exist in each document
+                    if mark_documents_with_per_doc_entities(es, doc_entities):
                         monitor_state["total_processed"] += len(documents)
                         monitor_state["last_batch_size"] = len(documents)
                         logger.info(f"✅ Successfully processed {len(documents)} documents")

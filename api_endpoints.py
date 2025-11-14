@@ -10,10 +10,11 @@ from fastapi.responses import JSONResponse
 
 from config import CHECK_INTERVAL
 from models import monitor_state, global_citations, global_judges, global_advocates, global_outcomes, global_case_durations, global_courts
-from elasticsearch_client import connect_to_elasticsearch, fetch_unprocessed_documents, mark_documents_processed, get_elasticsearch_stats
+from elasticsearch_client import connect_to_elasticsearch, fetch_unprocessed_documents, mark_documents_with_per_doc_entities, get_elasticsearch_stats
 from dgraph_client import apply_dgraph_schema, upload_to_dgraph
 from mutation_builder import build_dgraph_mutation
 from monitor import monitor_and_process
+from entity_detector import detect_entities_in_batch
 
 logger = logging.getLogger(__name__)
 
@@ -116,6 +117,9 @@ async def process_now():
         if not apply_dgraph_schema(retry=True):
             raise HTTPException(status_code=500, detail="Failed to apply Dgraph schema after retries")
         
+        # Detect which entities exist in each document
+        doc_entities = detect_entities_in_batch(documents)
+        
         # Build mutation
         mutation = build_dgraph_mutation(documents)
         
@@ -123,28 +127,9 @@ async def process_now():
         if not upload_to_dgraph(mutation, retry=True):
             raise HTTPException(status_code=500, detail="Failed to upload to Dgraph after retries")
         
-        # Define all entity types being processed
-        entity_types = [
-            'judgment',
-            'citations', 
-            'judges',
-            'advocates',
-            'outcome',
-            'case_duration',
-            'court',
-            'decision_date',
-            'filing_date',
-            'petitioner_party',
-            'respondant_party',
-            'case_number',
-            'summary',
-            'case_type',
-            'neutral_citation',
-            'acts'
-        ]
-        
-        # Mark as processed with entity tracking
-        if not mark_documents_processed(es, documents, entity_types):
+        # Mark as processed with per-document entity tracking
+        # Only mark entities that actually exist in each document
+        if not mark_documents_with_per_doc_entities(es, doc_entities):
             raise HTTPException(status_code=500, detail="Failed to mark documents as processed")
         
         monitor_state["total_processed"] += len(documents)
