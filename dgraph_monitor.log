@@ -8159,3 +8159,271 @@
 2025-11-14 12:19:17,741 - INFO - 🛑 Dgraph Monitor API Stopped
 2025-11-14 12:19:17,742 - INFO - Total documents processed: 0
 2025-11-14 12:19:17,742 - INFO - ======================================================================
+2025-11-14 19:13:30,200 - INFO - ======================================================================
+2025-11-14 19:13:30,200 - INFO - 🚀 Dgraph Monitor API Started
+2025-11-14 19:13:30,200 - INFO - ======================================================================
+2025-11-14 19:13:30,200 - INFO - Elasticsearch: http://localhost:9200
+2025-11-14 19:13:30,200 - INFO - Dgraph: http://localhost:8180
+2025-11-14 19:13:30,200 - INFO - Check Interval: 30 seconds
+2025-11-14 19:13:30,200 - INFO - Max Retries: 20
+2025-11-14 19:13:30,200 - INFO - Initial Retry Delay: 30 seconds (exponential backoff)
+2025-11-14 19:13:30,200 - INFO - ======================================================================
+2025-11-14 19:13:30,200 - INFO - 🔄 Auto-starting monitoring with automatic retry...
+2025-11-14 19:13:30,200 - INFO - ✅ Monitoring task started! Will automatically retry connections if services are down.
+2025-11-14 19:13:30,200 - INFO - 🔄 Starting continuous monitoring...
+2025-11-14 19:13:30,203 - INFO - GET http://localhost:9200/ [status:200 request:0.002s]
+2025-11-14 19:13:30,204 - INFO - HEAD http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:13:30,205 - INFO - HEAD http://localhost:9200/graphdb [status:200 request:0.001s]
+2025-11-14 19:13:30,205 - INFO - ✅ Connected to Elasticsearch successfully
+2025-11-14 19:13:30,208 - INFO - POST http://localhost:9200/graphdb/_search?scroll=2m [status:200 request:0.003s]
+2025-11-14 19:13:30,210 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 request:0.001s]
+2025-11-14 19:13:30,210 - INFO - Found 0 unprocessed documents
+2025-11-14 19:14:00,212 - INFO - GET http://localhost:9200/ [status:200 request:0.002s]
+2025-11-14 19:14:00,213 - INFO - HEAD http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:14:00,214 - INFO - HEAD http://localhost:9200/graphdb [status:200 request:0.001s]
+2025-11-14 19:14:00,214 - INFO - ✅ Connected to Elasticsearch successfully
+2025-11-14 19:14:00,217 - INFO - POST http://localhost:9200/graphdb/_search?scroll=2m [status:200 request:0.002s]
+2025-11-14 19:14:00,219 - INFO - POST http://localhost:9200/_search/scroll [status:200 request:0.002s]
+2025-11-14 19:14:00,220 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 request:0.001s]
+2025-11-14 19:14:00,221 - INFO - Found 1 unprocessed documents
+2025-11-14 19:14:00,221 - INFO - 📝 Processing 1 new documents...
+2025-11-14 19:14:00,229 - INFO - ✅ Schema applied successfully
+2025-11-14 19:14:00,229 - INFO - Detected entities for 1 documents
+2025-11-14 19:14:00,229 - INFO - ✅ Mutation Builder initialized with all relation handlers
+2025-11-14 19:14:00,229 - INFO - Building mutation for 1 documents...
+2025-11-14 19:14:00,229 - INFO - ✅ Mutation built successfully:
+2025-11-14 19:14:00,229 - INFO -    📚 Citations: 2
+2025-11-14 19:14:00,230 - INFO -    👨‍⚖️  Judges: 3
+2025-11-14 19:14:00,230 - INFO -    👔 Advocates: 3
+2025-11-14 19:14:00,230 - INFO -    🎯 Outcomes: 1
+2025-11-14 19:14:00,230 - INFO -    ⏱️  Case Durations: 1
+2025-11-14 19:14:00,230 - INFO -    🏛️  Courts: 0
+2025-11-14 19:14:00,230 - INFO -    🔢 Total nodes: 11
+2025-11-14 19:14:00,230 - INFO - Saved mutation to dgraph_mutation_latest.json
+2025-11-14 19:14:00,239 - INFO - Dgraph response status: 200
+2025-11-14 19:14:00,241 - INFO - Dgraph response: {'data': {'code': 'Success', 'message': 'Done', 'queries': {}, 'uids': {'uid(adv_b12648a4ec51)': '0x38b007ed', 'uid(adv_f649c7f30bc5)': '0x38b007e8', 'uid(adv_fbf1a8def364)': '0x38b007ee', 'uid(cite_414e530b4c99)': '0x38b007e7', 'uid(cite_4d082c058459)': '0x38b007ec', 'uid(duration_584dd495c70f)': '0x38b007eb', 'uid(judge_17babf394ab5)': '0x38b007f0', 'uid(judge_517d76dc853f)': '0x38b007ea', 'uid(judge_8c9387ca7d9f)': '0x38b007e9', 'uid(main_1)': '0x38b007e6', 'uid(outcome_ea9157af292a)': '0x38b007ef'}}, 'extensions': {'server_latency': {'parsing_ns': 54860, 'processing_ns': 3717971, 'encoding_ns': 11847, 'assign_timestamp_ns': 340327, 'total_ns': 4435876}, 'txn': {'start_ts': 520863, 'commit_ts': 520864, 'preds': ['1-0-advocate_id', '1-0-advocate_type', '1-0-case_duration_id', '1-0-cites', '1-0-dgraph.type', '1-0-doc_id', '1-0-duration', '1-0-has_case_duration', '1-0-has_outcome', '1-0-judge_id', '1-0-judged_by', '1-0-judgment_id', '1-0-name', '1-0-outcome_id', '1-0-petitioner_represented_by', '1-0-respondant_represented_by', '1-0-title', '1-0-year']}}}
+2025-11-14 19:14:00,241 - INFO - ✅ Data uploaded to Dgraph successfully
+2025-11-14 19:14:00,275 - INFO - POST http://localhost:9200/graphdb/_update/yeTGbJoBE4wsznJV68Fw [status:200 request:0.033s]
+2025-11-14 19:14:00,275 - INFO - ✅ Marked 1 documents with per-document entity tracking
+2025-11-14 19:14:00,275 - INFO - ✅ Successfully processed 1 documents
+2025-11-14 19:14:30,277 - INFO - GET http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:14:30,278 - INFO - HEAD http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:14:30,279 - INFO - HEAD http://localhost:9200/graphdb [status:200 request:0.001s]
+2025-11-14 19:14:30,279 - INFO - ✅ Connected to Elasticsearch successfully
+2025-11-14 19:14:30,281 - INFO - POST http://localhost:9200/graphdb/_search?scroll=2m [status:200 request:0.002s]
+2025-11-14 19:14:30,283 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 request:0.001s]
+2025-11-14 19:14:30,283 - INFO - Found 0 unprocessed documents
+2025-11-14 19:15:00,285 - INFO - GET http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:15:00,286 - INFO - HEAD http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:15:00,287 - INFO - HEAD http://localhost:9200/graphdb [status:200 request:0.001s]
+2025-11-14 19:15:00,288 - INFO - ✅ Connected to Elasticsearch successfully
+2025-11-14 19:15:00,290 - INFO - POST http://localhost:9200/graphdb/_search?scroll=2m [status:200 request:0.002s]
+2025-11-14 19:15:00,291 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 request:0.001s]
+2025-11-14 19:15:00,291 - INFO - Found 0 unprocessed documents
+2025-11-14 19:15:30,293 - INFO - GET http://localhost:9200/ [status:200 request:0.002s]
+2025-11-14 19:15:30,294 - INFO - HEAD http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:15:30,295 - INFO - HEAD http://localhost:9200/graphdb [status:200 request:0.001s]
+2025-11-14 19:15:30,296 - INFO - ✅ Connected to Elasticsearch successfully
+2025-11-14 19:15:30,298 - INFO - POST http://localhost:9200/graphdb/_search?scroll=2m [status:200 request:0.002s]
+2025-11-14 19:15:30,299 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 request:0.001s]
+2025-11-14 19:15:30,299 - INFO - Found 0 unprocessed documents
+2025-11-14 19:16:00,303 - INFO - GET http://localhost:9200/ [status:200 request:0.002s]
+2025-11-14 19:16:00,304 - INFO - HEAD http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:16:00,306 - INFO - HEAD http://localhost:9200/graphdb [status:200 request:0.001s]
+2025-11-14 19:16:00,306 - INFO - ✅ Connected to Elasticsearch successfully
+2025-11-14 19:16:00,308 - INFO - POST http://localhost:9200/graphdb/_search?scroll=2m [status:200 request:0.002s]
+2025-11-14 19:16:00,310 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 request:0.001s]
+2025-11-14 19:16:00,310 - INFO - Found 0 unprocessed documents
+2025-11-14 19:16:30,311 - INFO - GET http://localhost:9200/ [status:200 request:0.002s]
+2025-11-14 19:16:30,312 - INFO - HEAD http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:16:30,313 - INFO - HEAD http://localhost:9200/graphdb [status:200 request:0.001s]
+2025-11-14 19:16:30,314 - INFO - ✅ Connected to Elasticsearch successfully
+2025-11-14 19:16:30,316 - INFO - POST http://localhost:9200/graphdb/_search?scroll=2m [status:200 request:0.002s]
+2025-11-14 19:16:30,317 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 request:0.001s]
+2025-11-14 19:16:30,317 - INFO - Found 0 unprocessed documents
+2025-11-14 19:16:36,713 - INFO - ======================================================================
+2025-11-14 19:16:36,713 - INFO - 🛑 Dgraph Monitor API Stopped
+2025-11-14 19:16:36,713 - INFO - Total documents processed: 1
+2025-11-14 19:16:36,713 - INFO - ======================================================================
+2025-11-14 19:16:37,489 - INFO - ======================================================================
+2025-11-14 19:16:37,489 - INFO - 🚀 Dgraph Monitor API Started
+2025-11-14 19:16:37,489 - INFO - ======================================================================
+2025-11-14 19:16:37,489 - INFO - Elasticsearch: http://localhost:9200
+2025-11-14 19:16:37,490 - INFO - Dgraph: http://localhost:8180
+2025-11-14 19:16:37,490 - INFO - Check Interval: 30 seconds
+2025-11-14 19:16:37,490 - INFO - Max Retries: 20
+2025-11-14 19:16:37,490 - INFO - Initial Retry Delay: 30 seconds (exponential backoff)
+2025-11-14 19:16:37,490 - INFO - ======================================================================
+2025-11-14 19:16:37,490 - INFO - 🔄 Auto-starting monitoring with automatic retry...
+2025-11-14 19:16:37,490 - INFO - ✅ Monitoring task started! Will automatically retry connections if services are down.
+2025-11-14 19:16:37,490 - INFO - 🔄 Starting continuous monitoring...
+2025-11-14 19:16:37,492 - INFO - GET http://localhost:9200/ [status:200 request:0.002s]
+2025-11-14 19:16:37,494 - INFO - HEAD http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:16:37,496 - INFO - HEAD http://localhost:9200/graphdb [status:200 request:0.001s]
+2025-11-14 19:16:37,496 - INFO - ✅ Connected to Elasticsearch successfully
+2025-11-14 19:16:37,498 - INFO - POST http://localhost:9200/graphdb/_search?scroll=2m [status:200 request:0.002s]
+2025-11-14 19:16:37,499 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 request:0.001s]
+2025-11-14 19:16:37,500 - INFO - Found 0 unprocessed documents
+2025-11-14 19:17:07,501 - INFO - GET http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:17:07,502 - INFO - HEAD http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:17:07,503 - INFO - HEAD http://localhost:9200/graphdb [status:200 request:0.001s]
+2025-11-14 19:17:07,504 - INFO - ✅ Connected to Elasticsearch successfully
+2025-11-14 19:17:07,506 - INFO - POST http://localhost:9200/graphdb/_search?scroll=2m [status:200 request:0.002s]
+2025-11-14 19:17:07,507 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 request:0.001s]
+2025-11-14 19:17:07,507 - INFO - Found 0 unprocessed documents
+2025-11-14 19:17:37,512 - INFO - GET http://localhost:9200/ [status:200 request:0.004s]
+2025-11-14 19:17:37,515 - INFO - HEAD http://localhost:9200/ [status:200 request:0.002s]
+2025-11-14 19:17:37,518 - INFO - HEAD http://localhost:9200/graphdb [status:200 request:0.002s]
+2025-11-14 19:17:37,518 - INFO - ✅ Connected to Elasticsearch successfully
+2025-11-14 19:17:37,520 - INFO - POST http://localhost:9200/graphdb/_search?scroll=2m [status:200 request:0.002s]
+2025-11-14 19:17:37,522 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 request:0.001s]
+2025-11-14 19:17:37,522 - INFO - Found 0 unprocessed documents
+2025-11-14 19:18:07,527 - INFO - GET http://localhost:9200/ [status:200 request:0.004s]
+2025-11-14 19:18:07,531 - INFO - HEAD http://localhost:9200/ [status:200 request:0.003s]
+2025-11-14 19:18:07,534 - INFO - HEAD http://localhost:9200/graphdb [status:200 request:0.003s]
+2025-11-14 19:18:07,535 - INFO - ✅ Connected to Elasticsearch successfully
+2025-11-14 19:18:07,537 - INFO - POST http://localhost:9200/graphdb/_search?scroll=2m [status:200 request:0.002s]
+2025-11-14 19:18:07,539 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 request:0.001s]
+2025-11-14 19:18:07,539 - INFO - Found 0 unprocessed documents
+2025-11-14 19:18:37,541 - INFO - GET http://localhost:9200/ [status:200 request:0.002s]
+2025-11-14 19:18:37,543 - INFO - HEAD http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:18:37,544 - INFO - HEAD http://localhost:9200/graphdb [status:200 request:0.001s]
+2025-11-14 19:18:37,544 - INFO - ✅ Connected to Elasticsearch successfully
+2025-11-14 19:18:37,546 - INFO - POST http://localhost:9200/graphdb/_search?scroll=2m [status:200 request:0.002s]
+2025-11-14 19:18:37,547 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 request:0.001s]
+2025-11-14 19:18:37,548 - INFO - Found 0 unprocessed documents
+2025-11-14 19:19:07,550 - INFO - GET http://localhost:9200/ [status:200 request:0.002s]
+2025-11-14 19:19:07,552 - INFO - HEAD http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:19:07,553 - INFO - HEAD http://localhost:9200/graphdb [status:200 request:0.001s]
+2025-11-14 19:19:07,553 - INFO - ✅ Connected to Elasticsearch successfully
+2025-11-14 19:19:07,556 - INFO - POST http://localhost:9200/graphdb/_search?scroll=2m [status:200 request:0.002s]
+2025-11-14 19:19:07,557 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 request:0.001s]
+2025-11-14 19:19:07,557 - INFO - Found 0 unprocessed documents
+2025-11-14 19:19:37,564 - INFO - GET http://localhost:9200/ [status:200 request:0.006s]
+2025-11-14 19:19:37,567 - INFO - HEAD http://localhost:9200/ [status:200 request:0.003s]
+2025-11-14 19:19:37,571 - INFO - HEAD http://localhost:9200/graphdb [status:200 request:0.003s]
+2025-11-14 19:19:37,572 - INFO - ✅ Connected to Elasticsearch successfully
+2025-11-14 19:19:37,579 - INFO - POST http://localhost:9200/graphdb/_search?scroll=2m [status:200 request:0.007s]
+2025-11-14 19:19:37,584 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 request:0.004s]
+2025-11-14 19:19:37,585 - INFO - Found 0 unprocessed documents
+2025-11-14 19:20:07,587 - INFO - GET http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:20:07,588 - INFO - HEAD http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:20:07,590 - INFO - HEAD http://localhost:9200/graphdb [status:200 request:0.002s]
+2025-11-14 19:20:07,590 - INFO - ✅ Connected to Elasticsearch successfully
+2025-11-14 19:20:07,594 - INFO - POST http://localhost:9200/graphdb/_search?scroll=2m [status:200 request:0.003s]
+2025-11-14 19:20:07,595 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 request:0.001s]
+2025-11-14 19:20:07,595 - INFO - Found 0 unprocessed documents
+2025-11-14 19:20:37,597 - INFO - GET http://localhost:9200/ [status:200 request:0.002s]
+2025-11-14 19:20:37,598 - INFO - HEAD http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:20:37,599 - INFO - HEAD http://localhost:9200/graphdb [status:200 request:0.001s]
+2025-11-14 19:20:37,600 - INFO - ✅ Connected to Elasticsearch successfully
+2025-11-14 19:20:37,602 - INFO - POST http://localhost:9200/graphdb/_search?scroll=2m [status:200 request:0.002s]
+2025-11-14 19:20:37,604 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 request:0.001s]
+2025-11-14 19:20:37,604 - INFO - Found 0 unprocessed documents
+2025-11-14 19:21:07,607 - INFO - GET http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:21:07,607 - INFO - HEAD http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:21:07,608 - INFO - HEAD http://localhost:9200/graphdb [status:200 request:0.001s]
+2025-11-14 19:21:07,609 - INFO - ✅ Connected to Elasticsearch successfully
+2025-11-14 19:21:07,611 - INFO - POST http://localhost:9200/graphdb/_search?scroll=2m [status:200 request:0.002s]
+2025-11-14 19:21:07,612 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 request:0.001s]
+2025-11-14 19:21:07,612 - INFO - Found 0 unprocessed documents
+2025-11-14 19:21:37,614 - INFO - GET http://localhost:9200/ [status:200 request:0.002s]
+2025-11-14 19:21:37,615 - INFO - HEAD http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:21:37,616 - INFO - HEAD http://localhost:9200/graphdb [status:200 request:0.001s]
+2025-11-14 19:21:37,616 - INFO - ✅ Connected to Elasticsearch successfully
+2025-11-14 19:21:37,618 - INFO - POST http://localhost:9200/graphdb/_search?scroll=2m [status:200 request:0.002s]
+2025-11-14 19:21:37,620 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 request:0.001s]
+2025-11-14 19:21:37,620 - INFO - Found 0 unprocessed documents
+2025-11-14 19:22:07,622 - INFO - GET http://localhost:9200/ [status:200 request:0.002s]
+2025-11-14 19:22:07,624 - INFO - HEAD http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:22:07,625 - INFO - HEAD http://localhost:9200/graphdb [status:200 request:0.001s]
+2025-11-14 19:22:07,625 - INFO - ✅ Connected to Elasticsearch successfully
+2025-11-14 19:22:07,627 - INFO - POST http://localhost:9200/graphdb/_search?scroll=2m [status:200 request:0.002s]
+2025-11-14 19:22:07,629 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 request:0.001s]
+2025-11-14 19:22:07,629 - INFO - Found 0 unprocessed documents
+2025-11-14 19:22:37,631 - INFO - GET http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:22:37,632 - INFO - HEAD http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:22:37,633 - INFO - HEAD http://localhost:9200/graphdb [status:200 request:0.001s]
+2025-11-14 19:22:37,633 - INFO - ✅ Connected to Elasticsearch successfully
+2025-11-14 19:22:37,635 - INFO - POST http://localhost:9200/graphdb/_search?scroll=2m [status:200 request:0.002s]
+2025-11-14 19:22:37,636 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 request:0.001s]
+2025-11-14 19:22:37,636 - INFO - Found 0 unprocessed documents
+2025-11-14 19:22:59,259 - INFO - ======================================================================
+2025-11-14 19:22:59,259 - INFO - 🛑 Dgraph Monitor API Stopped
+2025-11-14 19:22:59,259 - INFO - Total documents processed: 0
+2025-11-14 19:22:59,259 - INFO - ======================================================================
+2025-11-14 19:22:59,986 - INFO - ======================================================================
+2025-11-14 19:22:59,986 - INFO - 🚀 Dgraph Monitor API Started
+2025-11-14 19:22:59,987 - INFO - ======================================================================
+2025-11-14 19:22:59,987 - INFO - Elasticsearch: http://localhost:9200
+2025-11-14 19:22:59,987 - INFO - Dgraph: http://localhost:8180
+2025-11-14 19:22:59,987 - INFO - Check Interval: 30 seconds
+2025-11-14 19:22:59,987 - INFO - Max Retries: 20
+2025-11-14 19:22:59,987 - INFO - Initial Retry Delay: 30 seconds (exponential backoff)
+2025-11-14 19:22:59,987 - INFO - ======================================================================
+2025-11-14 19:22:59,987 - INFO - 🔄 Auto-starting monitoring with automatic retry...
+2025-11-14 19:22:59,987 - INFO - ✅ Monitoring task started! Will automatically retry connections if services are down.
+2025-11-14 19:22:59,987 - INFO - 🔄 Starting continuous monitoring...
+2025-11-14 19:22:59,989 - INFO - GET http://localhost:9200/ [status:200 request:0.002s]
+2025-11-14 19:22:59,991 - INFO - HEAD http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:22:59,993 - INFO - HEAD http://localhost:9200/graphdb [status:200 request:0.001s]
+2025-11-14 19:22:59,993 - INFO - ✅ Connected to Elasticsearch successfully
+2025-11-14 19:22:59,995 - INFO - POST http://localhost:9200/graphdb/_search?scroll=2m [status:200 request:0.002s]
+2025-11-14 19:22:59,996 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 request:0.001s]
+2025-11-14 19:22:59,996 - INFO - Found 0 unprocessed documents
+2025-11-14 19:23:30,000 - INFO - GET http://localhost:9200/ [status:200 request:0.003s]
+2025-11-14 19:23:30,002 - INFO - HEAD http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:23:30,003 - INFO - HEAD http://localhost:9200/graphdb [status:200 request:0.002s]
+2025-11-14 19:23:30,003 - INFO - ✅ Connected to Elasticsearch successfully
+2025-11-14 19:23:30,006 - INFO - POST http://localhost:9200/graphdb/_search?scroll=2m [status:200 request:0.002s]
+2025-11-14 19:23:30,008 - INFO - POST http://localhost:9200/_search/scroll [status:200 request:0.002s]
+2025-11-14 19:23:30,010 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 request:0.001s]
+2025-11-14 19:23:30,010 - INFO - Found 1 unprocessed documents
+2025-11-14 19:23:30,010 - INFO - 📝 Processing 1 new documents...
+2025-11-14 19:23:30,018 - INFO - ✅ Schema applied successfully
+2025-11-14 19:23:30,018 - INFO - Detected entities for 1 documents
+2025-11-14 19:23:30,018 - INFO - ✅ Mutation Builder initialized with all relation handlers
+2025-11-14 19:23:30,018 - INFO - Building mutation for 1 documents...
+2025-11-14 19:23:30,019 - INFO - ✅ Mutation built successfully:
+2025-11-14 19:23:30,019 - INFO -    📚 Citations: 2
+2025-11-14 19:23:30,019 - INFO -    👨‍⚖️  Judges: 2
+2025-11-14 19:23:30,019 - INFO -    👔 Advocates: 2
+2025-11-14 19:23:30,019 - INFO -    🎯 Outcomes: 1
+2025-11-14 19:23:30,019 - INFO -    ⏱️  Case Durations: 1
+2025-11-14 19:23:30,019 - INFO -    🏛️  Courts: 0
+2025-11-14 19:23:30,019 - INFO -    🔢 Total nodes: 9
+2025-11-14 19:23:30,019 - INFO - Saved mutation to dgraph_mutation_latest.json
+2025-11-14 19:23:30,025 - INFO - Dgraph response status: 200
+2025-11-14 19:23:30,025 - INFO - Dgraph response: {'data': {'code': 'Success', 'message': 'Done', 'queries': {}, 'uids': {'uid(adv_7c001204688a)': '0x38b007f6', 'uid(adv_e6bd30275027)': '0x38b007f4', 'uid(cite_e26a5a9d2d2d)': '0x38b007f9', 'uid(cite_ec7324e4f114)': '0x38b007fa', 'uid(duration_47747fe7abf0)': '0x38b007f8', 'uid(judge_06580d7652a6)': '0x38b007f3', 'uid(judge_1450e7687094)': '0x38b007f7', 'uid(main_1)': '0x38b007f2', 'uid(outcome_4b5e1a039d2a)': '0x38b007f5'}}, 'extensions': {'server_latency': {'parsing_ns': 47420, 'processing_ns': 2390021, 'encoding_ns': 14922, 'assign_timestamp_ns': 366115, 'total_ns': 3040872}, 'txn': {'start_ts': 521080, 'commit_ts': 521081, 'preds': ['1-0-advocate_id', '1-0-advocate_type', '1-0-case_duration_id', '1-0-cites', '1-0-dgraph.type', '1-0-doc_id', '1-0-duration', '1-0-has_case_duration', '1-0-has_outcome', '1-0-judge_id', '1-0-judged_by', '1-0-judgment_id', '1-0-name', '1-0-outcome_id', '1-0-petitioner_represented_by', '1-0-respondant_represented_by', '1-0-title', '1-0-year']}}}
+2025-11-14 19:23:30,025 - INFO - ✅ Data uploaded to Dgraph successfully
+2025-11-14 19:23:30,032 - INFO - POST http://localhost:9200/graphdb/_update/xeTFbJoBE4wsznJVFsGb [status:200 request:0.007s]
+2025-11-14 19:23:30,032 - INFO - ✅ Marked 1 documents with per-document entity tracking
+2025-11-14 19:23:30,032 - INFO - ✅ Successfully processed 1 documents
+2025-11-14 19:24:00,035 - INFO - GET http://localhost:9200/ [status:200 request:0.002s]
+2025-11-14 19:24:00,036 - INFO - HEAD http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:24:00,037 - INFO - HEAD http://localhost:9200/graphdb [status:200 request:0.001s]
+2025-11-14 19:24:00,037 - INFO - ✅ Connected to Elasticsearch successfully
+2025-11-14 19:24:00,040 - INFO - POST http://localhost:9200/graphdb/_search?scroll=2m [status:200 request:0.002s]
+2025-11-14 19:24:00,041 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 request:0.001s]
+2025-11-14 19:24:00,041 - INFO - Found 0 unprocessed documents
+2025-11-14 19:24:30,046 - INFO - GET http://localhost:9200/ [status:200 request:0.004s]
+2025-11-14 19:24:30,049 - INFO - HEAD http://localhost:9200/ [status:200 request:0.002s]
+2025-11-14 19:24:30,052 - INFO - HEAD http://localhost:9200/graphdb [status:200 request:0.003s]
+2025-11-14 19:24:30,052 - INFO - ✅ Connected to Elasticsearch successfully
+2025-11-14 19:24:30,055 - INFO - POST http://localhost:9200/graphdb/_search?scroll=2m [status:200 request:0.003s]
+2025-11-14 19:24:30,057 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 request:0.001s]
+2025-11-14 19:24:30,057 - INFO - Found 0 unprocessed documents
+2025-11-14 19:25:00,059 - INFO - GET http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:25:00,060 - INFO - HEAD http://localhost:9200/ [status:200 request:0.001s]
+2025-11-14 19:25:00,061 - INFO - HEAD http://localhost:9200/graphdb [status:200 request:0.001s]
+2025-11-14 19:25:00,061 - INFO - ✅ Connected to Elasticsearch successfully
+2025-11-14 19:25:00,063 - INFO - POST http://localhost:9200/graphdb/_search?scroll=2m [status:200 request:0.002s]
+2025-11-14 19:25:00,065 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 request:0.001s]
+2025-11-14 19:25:00,065 - INFO - Found 0 unprocessed documents
+2025-11-14 19:25:30,070 - INFO - GET http://localhost:9200/ [status:200 request:0.004s]
+2025-11-14 19:25:30,073 - INFO - HEAD http://localhost:9200/ [status:200 request:0.002s]
+2025-11-14 19:25:30,075 - INFO - HEAD http://localhost:9200/graphdb [status:200 request:0.001s]
+2025-11-14 19:25:30,075 - INFO - ✅ Connected to Elasticsearch successfully
+2025-11-14 19:25:30,078 - INFO - POST http://localhost:9200/graphdb/_search?scroll=2m [status:200 request:0.002s]
+2025-11-14 19:25:30,080 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 request:0.001s]
+2025-11-14 19:25:30,080 - INFO - Found 0 unprocessed documents

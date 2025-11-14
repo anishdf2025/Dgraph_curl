@@ -1,89 +1,79 @@
 {
-  "query": "{\n  main_1 as var(func: eq(judgment_id, \"J_yuTHbJoBE4wsznJVYMGm\"))\n  cite_79b45c0d403b as var(func: eq(title, \"T. Arivandandam v. T.V. Satyapal [1978] 1 SCR 742 : (1977) 4 SCC 467 - held applicable.\"))\n  cite_a32d95f0207e as var(func: eq(title, \"Satti Paradesi Samadhi & Pillayar Temple v. M. Sankuntala [2014] 9 SCR 221 : (2015) 5 SCC 674\"))\n  judge_506a299665cd as var(func: eq(name, \"Justice K. M. Joseph\")) @filter(type(Judge))\n  judge_27756f5a523a as var(func: eq(name, \"Justice B. R. Gavai\")) @filter(type(Judge))\n  adv_fa44ad1b3dc1 as var(func: eq(name, \"Mr. C. A. Sundaram\")) @filter(type(Advocate) AND eq(advocate_type, \"petitioner\"))\n  adv_fbd891e84642 as var(func: eq(name, \"Mr. P. S. Narasimha\")) @filter(type(Advocate) AND eq(advocate_type, \"respondant\"))\n  adv_4676dbbc0131 as var(func: eq(name, \"Ms. Madhavi Divan\")) @filter(type(Advocate) AND eq(advocate_type, \"respondant\"))\n  outcome_4b5e1a039d2a as var(func: eq(name, \"Respondent Won\")) @filter(type(Outcome))\n  duration_effb40d59fe0 as var(func: eq(duration, \"2019-11-10 to 2021-01-29\")) @filter(type(CaseDuration))\n}",
+  "query": "{\n  main_1 as var(func: eq(judgment_id, \"J_xeTFbJoBE4wsznJVFsGb\"))\n  cite_e26a5a9d2d2d as var(func: eq(title, \"Lalita Kumari v. Govt. of U.P., (2014) 2 SCC 1\"))\n  cite_ec7324e4f114 as var(func: eq(title, \"State of Haryana v. Bhajan Lal, 1992 Supp (1) SCC 335\"))\n  judge_1450e7687094 as var(func: eq(name, \"Justice Indira Banerjee\")) @filter(type(Judge))\n  judge_06580d7652a6 as var(func: eq(name, \"Justice Sanjay Kishan Kaul\")) @filter(type(Judge))\n  adv_e6bd30275027 as var(func: eq(name, \"Ms. Karuna Nundy\")) @filter(type(Advocate) AND eq(advocate_type, \"petitioner\"))\n  adv_7c001204688a as var(func: eq(name, \"Mr. Maninder Singh\")) @filter(type(Advocate) AND eq(advocate_type, \"respondant\"))\n  outcome_4b5e1a039d2a as var(func: eq(name, \"Respondent Won\")) @filter(type(Outcome))\n  duration_47747fe7abf0 as var(func: eq(duration, \"2019-06-10 to 2020-01-25\")) @filter(type(CaseDuration))\n}",
   "set": [
     {
       "uid": "uid(main_1)",
-      "judgment_id": "J_yuTHbJoBE4wsznJVYMGm",
-      "title": "Shri Mukund Bhavan Trust and Ors. v. Shrimant Chhatrapati Udayan Raje Pratapsinh Maharaj Bhonsle and Another",
-      "doc_id": "yuTHbJoBE4wsznJVYMGm",
+      "judgment_id": "J_xeTFbJoBE4wsznJVFsGb",
+      "title": "Asha Devi v. Delhi Police",
+      "doc_id": "xeTFbJoBE4wsznJVFsGb",
       "dgraph.type": "Judgment",
-      "year": 2024,
+      "year": 2020,
       "cites": [
         {
-          "uid": "uid(cite_79b45c0d403b)"
+          "uid": "uid(cite_e26a5a9d2d2d)"
         },
         {
-          "uid": "uid(cite_a32d95f0207e)"
+          "uid": "uid(cite_ec7324e4f114)"
         }
       ],
       "judged_by": [
         {
-          "uid": "uid(judge_506a299665cd)"
+          "uid": "uid(judge_1450e7687094)"
         },
         {
-          "uid": "uid(judge_27756f5a523a)"
+          "uid": "uid(judge_06580d7652a6)"
         }
       ],
       "petitioner_represented_by": [
         {
-          "uid": "uid(adv_fa44ad1b3dc1)"
+          "uid": "uid(adv_e6bd30275027)"
         }
       ],
       "respondant_represented_by": [
         {
-          "uid": "uid(adv_fbd891e84642)"
-        },
-        {
-          "uid": "uid(adv_4676dbbc0131)"
+          "uid": "uid(adv_7c001204688a)"
         }
       ],
       "has_outcome": {
         "uid": "uid(outcome_4b5e1a039d2a)"
       },
       "has_case_duration": {
-        "uid": "uid(duration_effb40d59fe0)"
+        "uid": "uid(duration_47747fe7abf0)"
       }
     },
     {
-      "uid": "uid(cite_79b45c0d403b)",
-      "title": "T. Arivandandam v. T.V. Satyapal [1978] 1 SCR 742 : (1977) 4 SCC 467 - held applicable.",
+      "uid": "uid(cite_e26a5a9d2d2d)",
+      "title": "Lalita Kumari v. Govt. of U.P., (2014) 2 SCC 1",
       "dgraph.type": "Judgment"
     },
     {
-      "uid": "uid(cite_a32d95f0207e)",
-      "title": "Satti Paradesi Samadhi & Pillayar Temple v. M. Sankuntala [2014] 9 SCR 221 : (2015) 5 SCC 674",
+      "uid": "uid(cite_ec7324e4f114)",
+      "title": "State of Haryana v. Bhajan Lal, 1992 Supp (1) SCC 335",
       "dgraph.type": "Judgment"
     },
     {
-      "uid": "uid(judge_506a299665cd)",
-      "judge_id": "judge_506a299665cd",
-      "name": "Justice K. M. Joseph",
+      "uid": "uid(judge_1450e7687094)",
+      "judge_id": "judge_1450e7687094",
+      "name": "Justice Indira Banerjee",
       "dgraph.type": "Judge"
     },
     {
-      "uid": "uid(judge_27756f5a523a)",
-      "judge_id": "judge_27756f5a523a",
-      "name": "Justice B. R. Gavai",
+      "uid": "uid(judge_06580d7652a6)",
+      "judge_id": "judge_06580d7652a6",
+      "name": "Justice Sanjay Kishan Kaul",
       "dgraph.type": "Judge"
     },
     {
-      "uid": "uid(adv_fa44ad1b3dc1)",
-      "advocate_id": "adv_fa44ad1b3dc1",
-      "name": "Mr. C. A. Sundaram",
+      "uid": "uid(adv_e6bd30275027)",
+      "advocate_id": "adv_e6bd30275027",
+      "name": "Ms. Karuna Nundy",
       "advocate_type": "petitioner",
       "dgraph.type": "Advocate"
     },
     {
-      "uid": "uid(adv_fbd891e84642)",
-      "advocate_id": "adv_fbd891e84642",
-      "name": "Mr. P. S. Narasimha",
-      "advocate_type": "respondant",
-      "dgraph.type": "Advocate"
-    },
-    {
-      "uid": "uid(adv_4676dbbc0131)",
-      "advocate_id": "adv_4676dbbc0131",
-      "name": "Ms. Madhavi Divan",
+      "uid": "uid(adv_7c001204688a)",
+      "advocate_id": "adv_7c001204688a",
+      "name": "Mr. Maninder Singh",
       "advocate_type": "respondant",
       "dgraph.type": "Advocate"
     },
@@ -94,9 +84,9 @@
       "dgraph.type": "Outcome"
     },
     {
-      "uid": "uid(duration_effb40d59fe0)",
-      "case_duration_id": "duration_effb40d59fe0",
-      "duration": "2019-11-10 to 2021-01-29",
+      "uid": "uid(duration_47747fe7abf0)",
+      "case_duration_id": "duration_47747fe7abf0",
+      "duration": "2019-06-10 to 2020-01-25",
       "dgraph.type": "CaseDuration"
     }
   ]

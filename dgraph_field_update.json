@@ -1,5 +1,5 @@
 {
-  "query": "{\n  court_c856d8650786 as var(func: eq(name, \"Supreme Court of India\")) @filter(type(Court) AND eq(location, \"New Delhi\"))\n  main_1 as var(func: eq(judgment_id, \"J_yuTHbJoBE4wsznJVYMGm\"))\n}",
+  "query": "{\n  court_c856d8650786 as var(func: eq(name, \"Supreme Court of India\")) @filter(type(Court) AND eq(location, \"New Delhi\"))\n  main_1 as var(func: eq(judgment_id, \"J_xeTFbJoBE4wsznJVFsGb\"))\n}",
   "set": [
     {
       "uid": "uid(court_c856d8650786)",
