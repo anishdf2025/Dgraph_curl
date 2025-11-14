@@ -166,6 +166,59 @@ def mark_documents_processed(es: Elasticsearch, documents: List[Dict], entity_ty
         return False
 
 
+def mark_documents_with_per_doc_entities(es: Elasticsearch, doc_entities: Dict[str, List[str]]) -> bool:
+    """
+    Mark documents as processed with per-document entity tracking
+    Each document is marked with only the entities it actually contains
+    
+    Args:
+        es: Elasticsearch client
+        doc_entities: Dictionary mapping document _id to list of entity types
+                     Example: {"doc1": ["judgment", "citations"], "doc2": ["judgment", "court"]}
+    
+    Returns:
+        True if successful, False otherwise
+    """
+    try:
+        timestamp = datetime.utcnow().isoformat()
+        
+        for doc_id, entity_types in doc_entities.items():
+            if not entity_types:
+                logger.warning(f"No entities found for document {doc_id}, skipping")
+                continue
+            
+            # Update with only the entities that exist in this specific document
+            es.update(
+                index=ES_INDEX_NAME,
+                id=doc_id,
+                body={
+                    "script": {
+                        "source": """
+                            if (ctx._source.processed_entities == null) {
+                                ctx._source.processed_entities = new HashMap();
+                            }
+                            for (entry in params.entities.entrySet()) {
+                                ctx._source.processed_entities[entry.getKey()] = entry.getValue();
+                            }
+                            ctx._source.last_dgraph_update = params.timestamp;
+                            ctx._source.processed_to_dgraph = true;
+                            ctx._source.dgraph_processed_at = params.timestamp;
+                        """,
+                        "params": {
+                            "entities": {et: True for et in entity_types},
+                            "timestamp": timestamp
+                        }
+                    }
+                }
+            )
+        
+        logger.info(f"✅ Marked {len(doc_entities)} documents with per-document entity tracking")
+        return True
+    except Exception as e:
+        logger.error(f"❌ Error marking documents with per-document entities: {e}")
+        return False
+
+
 def get_elasticsearch_stats(es: Elasticsearch) -> Dict:
     """Get statistics from Elasticsearch"""
     try:

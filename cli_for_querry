@@ -1,0 +1,135 @@
+appears all node and links present in the graph database ----------------------------------------------------
+
+
+{
+  allJudgments(func: type(Judgment)) {
+    uid
+    judgment_id
+    title
+    doc_id
+    year
+
+    cites {
+      uid
+      title
+      judgment_id
+    }
+
+    judged_by {
+      uid
+      name
+      judge_id
+    }
+
+    petitioner_represented_by {
+      uid
+      name
+      advocate_id
+      advocate_type
+    }
+    court_heard_in {
+      court_id
+      name
+      location
+      bench_type
+    }
+
+    respondant_represented_by {
+      uid
+      name
+      advocate_id
+      advocate_type
+    }
+
+    has_outcome {
+      uid
+      outcome_id
+      name
+    }
+
+    has_case_duration {
+      uid
+      case_duration_id
+      duration
+    }
+  }
+}
+
+all judges link with their judgments ----------------------------------------------------
+
+{
+  allJudges(func: type(Judge)) {
+    uid
+    name
+
+    judgments: ~judged_by {
+      title
+    }
+  }
+}
+
+given judge name and its title of judgment ----------------------------------------------------
+
+{
+  judgeJudgments(func: eq(name, "Justice A. S. Bopanna")) {
+    name
+    judgments: ~judged_by {
+      title
+      judgment_id
+    }
+  }
+}
+
+give title name give me all judge ----------------------------------------------------
+ {
+  judgment(func: eq(title, "Kaushik Narsinhbhai Patel & Ors. v. M/s S.J.R. Prime Corporation Private Limited")) {
+    title
+    judgment_id
+    judged_by {
+      name
+      judge_id
+      uid
+    }
+  }
+}
+totlal no of judges in a particular judgment -----------------------------------------------
+{
+  judgment(func: eq(title, "Kaushik Narsinhbhai Patel & Ors. v. M/s S.J.R. Prime Corporation Private Limited")) {
+    title
+    judgment_id
+    judges_count: count(judged_by)
+    judged_by {
+      name
+      judge_id
+      uid
+    }
+  }
+}
+
+givene citation node and get the title of judgment -------------------------------------------
+
+{
+  citationNode(func: eq(title, "T. Arivandandam v. T.V. Satyapal [1978] 1 SCR 742 : (1977) 4 SCC 467 - held applicable.")) {
+    title
+    judgment_id
+    ~cites {
+      title
+      judgment_id
+      year
+    }
+  }
+}
+court and its judgments ----------------------------------------------------
+
+{
+  courtNode(func: eq(name, "Supreme Court of India")) {
+    name
+    location
+    bench_type
+    ~court_heard_in {
+      title
+      judgment_id
+      year
+    }
+  }
+}
