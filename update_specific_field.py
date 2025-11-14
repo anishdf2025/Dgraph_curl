@@ -303,13 +303,18 @@ def main():
         
         # Upload to Dgraph
         if upload_mutation(mutation):
+            # Count actual court nodes updated (first half of set nodes)
+            num_courts = len([node for node in mutation['set'] if 'bench_type' in node])
+            num_judgments = len([node for node in mutation['set'] if 'court_heard_in' in node])
+            
             # Mark documents as processed for court_bench
             if mark_documents_processed(es, documents, ['court_bench']):
                 logger.info(f"\n{'='*60}")
                 logger.info(f"✅ SUCCESS!")
                 logger.info(f"{'='*60}")
-                logger.info(f"Updated bench_type for {len(mutation['set'])} Court nodes")
-                logger.info(f"Marked {len(documents)} judgments as processed for court_bench")
+                logger.info(f"Updated bench_type for {num_courts} Court node(s)")
+                logger.info(f"Connected {num_judgments} Judgment(s) to their Courts")
+                logger.info(f"Marked {len(documents)} document(s) as processed for court_bench")
                 logger.info(f"{'='*60}\n")
             else:
                 logger.warning("⚠️  Updated Dgraph but failed to mark documents in Elasticsearch")
